@@ -14,11 +14,10 @@ from keras.callbacks import EarlyStopping, ModelCheckpoint
 
 
 IMAGE_WIDTH, IMAGE_HEIGHT = 224, 224
-EPOCHS = 20
+EPOCHS = 10
 BATCH_SIZE = 64
 FULLY_CONN_SIZE = 1024
-NB_IV3_LAYERS_TO_FREEZE = 172
-
+# NB_IV3_LAYERS_TO_FREEZE = 172
 
 def get_nb_files(directory):
 
@@ -42,9 +41,9 @@ def setup_to_finetune(model):
 
     # NB_IV3_LAYERS corresponds to the top 2 inception blocks in the inceptionv3 arch
 
-    for layer in model.layers[:NB_IV3_LAYERS_TO_FREEZE]:
+    for layer in model.layers[:len(model.layers)-2]:
         layer.trainable = False
-    for layer in model.layers[NB_IV3_LAYERS_TO_FREEZE:]:
+    for layer in model.layers[len(model.layers)-2:]:
         layer.trainable = True
     model.compile(optimizer=SGD(lr=0.0001, momentum=0.9), loss='categorical_crossentropy', metrics=['accuracy'])
 
@@ -90,8 +89,7 @@ def train(args):
     callbacks = [
         EarlyStopping(monitor='val_loss', patience=2, verbose=2),
         ModelCheckpoint(filepath='best_model.h5', monitor='val_loss',
-                        save_best_only=True, verbose=2)
-    ]
+                        save_best_only=True, verbose=2)]
 
     # Transfer learning:
     setup_to_transfer_learn(model, model_base)
@@ -105,15 +103,14 @@ def train(args):
         class_weight='auto')
 
     # fine-tuning
-    '''setup_to_finetune(model)
-
+    setup_to_finetune(model)
     history_ft = model.fit_generator(
         train_generator,
         samples_per_epoch=nb_train_samples,
         nb_epoch=nb_epoch,
         validation_data=validation_generator,
         nb_val_samples=nb_val_samples,
-        class_weight='auto')'''
+        class_weight='auto')
 
     model.save(args.output_model_file)
 
