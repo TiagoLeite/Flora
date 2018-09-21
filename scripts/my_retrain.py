@@ -64,13 +64,8 @@ def train(args):
                                        shear_range=0.2,
                                        zoom_range=0.2,
                                        horizontal_flip=True)
-    test_datagen = ImageDataGenerator(preprocessing_function=preprocess_input,
-                                      rotation_range=30,
-                                      width_shift_range=0.2,
-                                      height_shift_range=0.2,
-                                      shear_range=0.2,
-                                      zoom_range=0.2,
-                                      horizontal_flip=True)
+
+    test_datagen = ImageDataGenerator()
 
     train_generator = train_datagen.flow_from_directory(args.train_dir,
                                                         target_size=(IMAGE_WIDTH, IMAGE_HEIGHT),
@@ -104,9 +99,9 @@ def train(args):
         train_generator,
         nb_epoch=nb_epoch,
         samples_per_epoch=nb_train_samples,
-        # validation_data=validation_generator,
+        validation_data=validation_generator,
         callbacks=callbacks,
-        # nb_val_samples=nb_val_samples,
+        nb_val_samples=nb_val_samples,
         class_weight='auto')
 
     # fine-tuning
