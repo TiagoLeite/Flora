@@ -31,7 +31,6 @@ def get_nb_files(directory):
 
 
 def setup_to_transfer_learn(model, base_model):
-    """Freeze all layers and compile the model"""
     for layer in base_model.layers:
         layer.trainable = False
     model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
@@ -78,13 +77,13 @@ def train(args):
     model_base = MobileNet(weights='imagenet', include_top=False,
                            input_shape=(224, 224, 3))
 
-    model_top = Sequential()
-    model_top.add(GlobalAveragePooling2D(input_shape=model_base.output_shape[1:], data_format=None))
-    model_top.add(Dense(1024, activation='relu'))
-    model_top.add(Dropout(0.5))
-    model_top.add(Dense(nb_classes, activation='softmax', name='final_output'))
+    x = model_base.output
+    x = GlobalAveragePooling2D()(x)
+    x = Dense(FULLY_CONN_SIZE, activation='relu')(x)
+    predictions = Dense(nb_classes, activation='softmax')(x)
+    model = Model(input=model_base.input, output=predictions)
 
-    model = Model(inputs=model_base.input, outputs=model_top(model_base.output))
+    # model = Model(inputs=model_base.input, outputs=model_top(model_base.output))
 
     callbacks = [
         EarlyStopping(monitor='val_loss', patience=2, verbose=2),
