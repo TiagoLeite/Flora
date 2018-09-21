@@ -4,17 +4,19 @@ import glob
 import argparse
 import matplotlib.pyplot as plt
 
-from keras.applications.inception_v3 import InceptionV3, preprocess_input
-from keras.applications.mobilenet import MobileNet
-from keras.models import Model
-from keras.layers import Dense, GlobalAveragePooling2D
+from keras.applications.inception_v3 import InceptionV3
+from keras.applications.mobilenet import MobileNet, preprocess_input
+from keras.models import Model, Sequential
+from keras.layers import Dense, GlobalAveragePooling2D, GlobalMaxPooling2D, Dropout, Flatten
 from keras.preprocessing.image import ImageDataGenerator
 from keras.optimizers import SGD
+from keras.callbacks import EarlyStopping, ModelCheckpoint
 
-IM_WIDTH, IM_HEIGHT = 224, 224  # fixed size for InceptionV3
-NB_EPOCHS = 3
-BAT_SIZE = 32
-FC_SIZE = 1024
+
+IMAGE_WIDTH, IMAGE_HEIGHT = 224, 224
+EPOCHS = 20
+BATCH_SIZE = 64
+FULLY_CONN_SIZE = 1024
 NB_IV3_LAYERS_TO_FREEZE = 172
 
 
@@ -33,35 +35,13 @@ def setup_to_transfer_learn(model, base_model):
     """Freeze all layers and compile the model"""
     for layer in base_model.layers:
         layer.trainable = False
-    model.compile(optimizer='rmsprop', loss='categorical_crossentropy', metrics=['accuracy'])
-
-
-def add_new_last_layer(base_model, nb_classes):
-    """Add last layer to the convnet
-
-  Args:
-    base_model: keras model excluding top
-    nb_classes: # of classes
-
-  Returns:
-    new keras model with last layer
-  """
-    x = base_model.output
-    x = GlobalAveragePooling2D()(x)
-    x = Dense(FC_SIZE, activation='relu')(x)  # new FC layer, random init
-    predictions = Dense(nb_classes, activation='softmax', name="final_output")(x)  # new softmax layer
-    model = Model(input=base_model.input, output=predictions)
-    return model
+    model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 
 
 def setup_to_finetune(model):
-    """Freeze the bottom NB_IV3_LAYERS and retrain the remaining top layers.
 
-  note: NB_IV3_LAYERS corresponds to the top 2 inception blocks in the inceptionv3 arch
+    # NB_IV3_LAYERS corresponds to the top 2 inception blocks in the inceptionv3 arch
 
-  Args:
-    model: keras model
-  """
     for layer in model.layers[:NB_IV3_LAYERS_TO_FREEZE]:
         layer.trainable = False
     for layer in model.layers[NB_IV3_LAYERS_TO_FREEZE:]:
@@ -70,7 +50,6 @@ def setup_to_finetune(model):
 
 
 def train(args):
-    """Use transfer learning and fine-tuning to train a network on a new dataset"""
     nb_train_samples = get_nb_files(args.train_dir)
     nb_classes = len(glob.glob(args.train_dir + "/*"))
     nb_val_samples = get_nb_files(args.val_dir)
@@ -78,57 +57,60 @@ def train(args):
     batch_size = int(args.batch_size)
 
     # data prep
-    train_datagen = ImageDataGenerator(
-        preprocessing_function=preprocess_input,
-        rotation_range=30,
-        width_shift_range=0.2,
-        height_shift_range=0.2,
-        shear_range=0.2,
-        zoom_range=0.2,
-        horizontal_flip=True
-    )
-    test_datagen = ImageDataGenerator(
-        preprocessing_function=preprocess_input,
-        rotation_range=30,
-        width_shift_range=0.2,
-        height_shift_range=0.2,
-        shear_range=0.2,
-        zoom_range=0.2,
-        horizontal_flip=True
-    )
+    train_datagen = ImageDataGenerator(preprocessing_function=preprocess_input,
+                                       rotation_range=30,
+                                       width_shift_range=0.2,
+                                       height_shift_range=0.2,
+                                       shear_range=0.2,
+                                       zoom_range=0.2,
+                                       horizontal_flip=True)
+    test_datagen = ImageDataGenerator(preprocessing_function=preprocess_input,
+                                      rotation_range=30,
+                                      width_shift_range=0.2,
+                                      height_shift_range=0.2,
+                                      shear_range=0.2,
+                                      zoom_range=0.2,
+                                      horizontal_flip=True)
 
-    train_generator = train_datagen.flow_from_directory(
-        args.train_dir,
-        target_size=(IM_WIDTH, IM_HEIGHT),
-        batch_size=batch_size,
-    )
+    train_generator = train_datagen.flow_from_directory(args.train_dir,
+                                                        target_size=(IMAGE_WIDTH, IMAGE_HEIGHT),
+                                                        batch_size=batch_size)
 
-    validation_generator = test_datagen.flow_from_directory(
-        args.val_dir,
-        target_size=(IM_WIDTH, IM_HEIGHT),
-        batch_size=batch_size,
-    )
+    validation_generator = test_datagen.flow_from_directory(args.val_dir,
+                                                            target_size=(IMAGE_WIDTH, IMAGE_HEIGHT),
+                                                            batch_size=batch_size)
 
-    # setup model
     # base_model = InceptionV3(weights='imagenet', include_top=False)  # include_top=False excludes final FC layer
+    model_base = MobileNet(weights='imagenet', include_top=False,
+                           input_shape=(224, 224, 3))
 
-    base_model = MobileNet(weights='imagenet', include_top=False,
-                                                  input_shape=(224, 224, 3))
-    model = add_new_last_layer(base_model, nb_classes)
+    model_top = Sequential()
+    model_top.add(GlobalAveragePooling2D(input_shape=model_base.output_shape[1:], data_format=None))
+    model_top.add(Dense(1024, activation='relu'))
+    model_top.add(Dropout(0.5))
+    model_top.add(Dense(nb_classes, activation='softmax', name='final_output'))
 
-    # transfer learning
-    setup_to_transfer_learn(model, base_model)
+    model = Model(inputs=model_base.input, outputs=model_top(model_base.output))
 
+    callbacks = [
+        EarlyStopping(monitor='val_loss', patience=2, verbose=2),
+        ModelCheckpoint(filepath='best_model.h5', monitor='val_loss',
+                        save_best_only=True, verbose=2)
+    ]
+
+    # Transfer learning:
+    setup_to_transfer_learn(model, model_base)
     history_tl = model.fit_generator(
         train_generator,
         nb_epoch=nb_epoch,
         samples_per_epoch=nb_train_samples,
         validation_data=validation_generator,
+        callbacks=callbacks,
         nb_val_samples=nb_val_samples,
         class_weight='auto')
 
     # fine-tuning
-    setup_to_finetune(model)
+    '''setup_to_finetune(model)
 
     history_ft = model.fit_generator(
         train_generator,
@@ -136,12 +118,12 @@ def train(args):
         nb_epoch=nb_epoch,
         validation_data=validation_generator,
         nb_val_samples=nb_val_samples,
-        class_weight='auto')
+        class_weight='auto')'''
 
     model.save(args.output_model_file)
 
     if args.plot:
-        plot_training(history_ft)
+        plot_training(history_tl)
 
 
 def plot_training(history):
@@ -166,8 +148,8 @@ if __name__ == "__main__":
     a = argparse.ArgumentParser()
     a.add_argument("--train_dir")
     a.add_argument("--val_dir")
-    a.add_argument("--nb_epoch", default=NB_EPOCHS)
-    a.add_argument("--batch_size", default=BAT_SIZE)
+    a.add_argument("--nb_epoch", default=EPOCHS)
+    a.add_argument("--batch_size", default=BATCH_SIZE)
     a.add_argument("--output_model_file", default="inceptionv3-ft.model")
     a.add_argument("--plot", action="store_true")
 
