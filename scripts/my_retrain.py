@@ -21,7 +21,7 @@ NB_IV3_LAYERS_TO_FREEZE = 172
 
 
 def get_nb_files(directory):
-    """Get number of files by searching directory recursively"""
+
     if not os.path.exists(directory):
         return 0
     cnt = 0
@@ -104,9 +104,9 @@ def train(args):
         train_generator,
         nb_epoch=nb_epoch,
         samples_per_epoch=nb_train_samples,
-        validation_data=validation_generator,
+        # validation_data=validation_generator,
         callbacks=callbacks,
-        nb_val_samples=nb_val_samples,
+        # nb_val_samples=nb_val_samples,
         class_weight='auto')
 
     # fine-tuning
