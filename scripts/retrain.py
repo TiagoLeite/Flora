@@ -113,6 +113,8 @@ from tensorflow.python.framework import tensor_shape
 from tensorflow.python.platform import gfile
 from tensorflow.python.util import compat
 
+from sklearn.metrics import confusion_matrix
+
 FLAGS = None
 
 # These are all parameters that are tied to the particular model architecture
@@ -1137,6 +1139,20 @@ def main(_):
         save_graph_to_file(sess, graph, FLAGS.output_graph)
         with gfile.FastGFile(FLAGS.output_labels, 'w') as f:
             f.write('\n'.join(image_lists.keys()) + '\n')
+
+        labels = [test_ground_truth[k].argmax() for k in range(len(test_ground_truth))]
+
+        # predictions = to_categorical(predictions, num_classes=16)
+
+        print(labels, predictions)
+
+        cm = confusion_matrix(labels, predictions)
+        recall = np.diag(cm) / np.sum(cm, axis=1)
+        precision = np.diag(cm) / np.sum(cm, axis=0)
+
+        print("Recall:", recall, "Precision", precision)
+
+        print("Confusion Matrix:\n", cm)
 
 
 if __name__ == '__main__':
