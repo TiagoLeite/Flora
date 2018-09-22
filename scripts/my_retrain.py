@@ -72,9 +72,11 @@ def train(args):
                                                             target_size=(IMAGE_WIDTH, IMAGE_HEIGHT),
                                                             batch_size=batch_size)
 
-    # base_model = InceptionV3(weights='imagenet', include_top=False)  # include_top=False excludes final FC layer
-    model_base = MobileNet(weights='imagenet', include_top=False,
-                           input_shape=(224, 224, 3))
+    model_base = InceptionV3(weights='imagenet', include_top=False,
+                             input_shape=(IMAGE_WIDTH, IMAGE_HEIGHT, 3))
+
+    # model_base = MobileNet(weights='imagenet', include_top=False,
+    #                       input_shape=(IMAGE_WIDTH, IMAGE_HEIGHT, 3))
 
     x = model_base.output
     x = GlobalAveragePooling2D()(x)
