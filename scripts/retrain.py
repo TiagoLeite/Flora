@@ -113,7 +113,9 @@ from tensorflow.python.framework import tensor_shape
 from tensorflow.python.platform import gfile
 from tensorflow.python.util import compat
 
-from sklearn.metrics import confusion_matrix
+import sklearn.metrics as metrics
+from keras.utils.np_utils import to_categorical
+
 
 FLAGS = None
 
@@ -1141,17 +1143,31 @@ def main(_):
             f.write('\n'.join(image_lists.keys()) + '\n')
 
         labels = [test_ground_truth[k].argmax() for k in range(len(test_ground_truth))]
-
+        # labels = test_ground_truth
         # predictions = to_categorical(predictions, num_classes=16)
+        cm = metrics.confusion_matrix(labels, predictions)
 
-        print(labels, predictions)
+        '''
+        precision = dict()
+        recall = dict()
+        average_precision = dict()
+        for i in range(class_count):
+            precision[i], recall[i], _ = metrics.precision_recall_curve(labels[:, i],
+                                                                        predictions[:, i])
+            average_precision[i] = metrics.average_precision_score(labels[:, i], predictions[:, i])
 
-        cm = confusion_matrix(labels, predictions)
-        recall = np.diag(cm) / np.sum(cm, axis=1)
-        precision = np.diag(cm) / np.sum(cm, axis=0)
+        # A "micro-average": quantifying score on all classes jointly
+        precision["micro"], recall["micro"], _ = metrics.precision_recall_curve(labels.ravel(),
+                                                                                predictions.ravel())
+        average_precision["micro"] = metrics.average_precision_score(labels, predictions,
+                                                                     average="micro")
 
-        print("Recall:", recall, "Precision", precision)
+        print('Average precision score, micro-averaged over all classes: {0:0.2f}'
+              .format(average_precision["micro"]))'''
 
+        recall = metrics.recall_score(labels, predictions, average=None)
+        precision = metrics.precision_score(labels, predictions, average=None)
+        print("Recall   :", recall, "\nPrecision:", precision)
         print("Confusion Matrix:\n", cm)
 
 
