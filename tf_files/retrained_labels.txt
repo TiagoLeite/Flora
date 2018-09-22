@@ -1,16 +1,17 @@
-bellis sp
-bougainvillea sp
-helianthus annuus
-hibiscus sp
-ixora coccinea
-lantana camara
-narcissus sp
-nerium oleander
-none
-plumbago auriculata
-rhododendron simsii
-rosa sp
-strelitzia reginae
-taraxacum officinale
-thunbergia alata
-viola x wittrockiana
+bluebell
+buttercup
+coltsfoot
+cowslip
+crocus
+daffodil
+daisy
+dandelion
+fritillary
+iris
+lilyvalley
+pansy
+snowdrop
+sunflower
+tigerlily
+tulip
+windflower
