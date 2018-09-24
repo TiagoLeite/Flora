@@ -779,12 +779,15 @@ def add_final_training_ops(class_count, final_tensor_name, bottleneck_tensor,
 
             variable_summaries(layer_weights)
         with tf.name_scope('biases'):
-            layer_biases = tf.Variable(tf.zeros([class_count]), name='final_biases')
+            layer_biases = tf.Variable(tf.ones([class_count])/100, name='final_biases')
             variable_summaries(layer_biases)
         with tf.name_scope('Wx_plus_b'):
             logits = tf.matmul(bottleneck_input, layer_weights) + layer_biases
             tf.summary.histogram('pre_activations', logits)
 
+    # w2 = tf.Variable(tf.truncated_normal(shape=[512, class_count], stddev=0.001))
+    # b2 = tf.Variable(tf.constant(0.001, shape=[class_count]))
+    # logits = tf.matmul(tf.nn.dropout(tf.nn.tanh(logits), keep_prob=0.5), w2) + b2
     final_tensor = tf.nn.softmax(logits, name=final_tensor_name)
     tf.summary.histogram('activations', final_tensor)
 
@@ -1167,7 +1170,13 @@ def main(_):
 
         recall = metrics.recall_score(labels, predictions, average=None)
         precision = metrics.precision_score(labels, predictions, average=None)
-        print("Recall   :", recall, "\nPrecision:", precision)
+        print("\nRecall   :", recall, "\nPrecision:", precision)
+        print("\nRecall mean:", np.mean(recall))
+        print("Precision m:", np.mean(precision))
+
+        recall = metrics.recall_score(labels, predictions, average='macro')
+        precision = metrics.precision_score(labels, predictions, average='macro')
+        print("\nRecall   :  ", recall, "\nPrecision:  ", precision)
         print("Confusion Matrix:\n", cm)
 
 
