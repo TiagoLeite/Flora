@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1029c49-d01f-40b8-870b-2ac80ec90bb8" name="Default Changelist" comment="recall precision form sk learn">
+      <change afterPath="$PROJECT_DIR$/commands.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/retrain.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/retrain.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tf_files/retrained_graph_100.pb" beforeDir="false" afterPath="$PROJECT_DIR$/tf_files/retrained_graph_100.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tf_files/retrained_graph_50.pb" beforeDir="false" afterPath="$PROJECT_DIR$/tf_files/retrained_graph_50.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tf_files/retrained_graph_75.pb" beforeDir="false" afterPath="$PROJECT_DIR$/tf_files/retrained_graph_75.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tf_files/training_summaries/mobilenet_1.0_224/train/events.out.tfevents.1538419777.tiago" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tf_files/training_summaries/mobilenet_1.0_224/validation/events.out.tfevents.1538419779.tiago" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,17 +18,19 @@
     <session id="-196442899">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="23" />
+          <entry key="project.closed" value="26" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.1" value="5" />
+          <entry key="project.open.time.1" value="7" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.2" value="3" />
           <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.30" value="2" />
           <entry key="project.open.time.31" value="1" />
+          <entry key="project.open.time.32" value="1" />
           <entry key="project.open.time.34" value="1" />
           <entry key="project.open.time.36" value="2" />
+          <entry key="project.open.time.38" value="1" />
           <entry key="project.open.time.44" value="1" />
           <entry key="project.open.time.48" value="1" />
           <entry key="project.open.time.49" value="1" />
@@ -36,14 +38,14 @@
           <entry key="project.open.time.65" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="25" />
+          <entry key="project.opened" value="29" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Erlang Terms" value="1" />
           <entry key="Image" value="5" />
-          <entry key="PLAIN_TEXT" value="6" />
+          <entry key="PLAIN_TEXT" value="10" />
           <entry key="Python" value="23" />
         </counts>
       </usages-collector>
@@ -51,24 +53,27 @@
         <counts>
           <entry key="Makefile" value="64" />
           <entry key="dummy" value="24" />
-          <entry key="py" value="1044" />
-          <entry key="txt" value="130" />
+          <entry key="gitignore" value="9" />
+          <entry key="py" value="1166" />
+          <entry key="txt" value="165" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="Makefile" value="1" />
           <entry key="config" value="1" />
+          <entry key="gitignore" value="1" />
           <entry key="jpg" value="5" />
           <entry key="py" value="23" />
-          <entry key="txt" value="5" />
+          <entry key="tiago" value="1" />
+          <entry key="txt" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="218" />
-          <entry key="Python" value="1044" />
+          <entry key="PLAIN_TEXT" value="262" />
+          <entry key="Python" value="1166" />
         </counts>
       </usages-collector>
     </session>
@@ -78,8 +83,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/retrain.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="1194" column="46" selection-start-line="1194" selection-start-column="46" selection-end-line="1194" selection-end-column="46" />
+            <state relative-caret-position="-1506">
+              <caret line="817" selection-start-line="817" selection-end-line="817" />
               <folding>
                 <element signature="e#3585#3623#0" expanded="true" />
               </folding>
@@ -88,10 +93,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file:///usr/local/lib/python3.6/dist-packages/sklearn/metrics/classification.py">
+        <entry file="file://$PROJECT_DIR$/commands.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22428">
-              <caret line="1264" column="66" selection-start-line="1264" selection-start-column="59" selection-end-line="1264" selection-end-column="66" />
+            <state relative-caret-position="18">
+              <caret line="1" column="432" selection-start-line="1" selection-start-column="410" selection-end-line="1" selection-end-column="432" />
             </state>
           </provider>
         </entry>
@@ -107,28 +112,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>pb</find>
-      <find>save</find>
-      <find>NB_IV3_LAYERS</find>
-      <find>global</find>
-      <find>model.</find>
-      <find>fit</find>
-      <find>test</find>
-      <find>epochs</find>
-      <find>epoch</find>
-      <find>epoc</find>
-      <find>val_Acc</find>
-      <find>valida</find>
-      <find>validation_percentage</find>
-      <find>mobile</find>
-      <find>class_indices</find>
-      <find>class_mo</find>
-      <find>fprint_misclassified_test_images</find>
-      <find>miscla</find>
-      <find>print_misclassified_test_images</find>
-      <find>main</find>
-      <find>to_nume</find>
-      <find>confu</find>
       <find>placeho</find>
       <find>1001</find>
       <find>5121001</find>
@@ -137,6 +120,28 @@
       <find>brigh</find>
       <find>drop</find>
       <find>recall</find>
+      <find>board</find>
+      <find>retrain_logs</find>
+      <find>100</find>
+      <find>64</find>
+      <find>eval</find>
+      <find>25</find>
+      <find>step</find>
+      <find>batch_s</find>
+      <find>train_batch_size</find>
+      <find>cross_entropy_1</find>
+      <find>cross_entropy</find>
+      <find>tf.summary.scalar</find>
+      <find>summaries</find>
+      <find>steps</find>
+      <find>summary</find>
+      <find>validation</find>
+      <find>dropo</find>
+      <find>softmax_cross</find>
+      <find>batch</find>
+      <find>opti</find>
+      <find>dropout</find>
+      <find>accuracy</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -145,18 +150,19 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/Makefile" />
         <option value="$PROJECT_DIR$/HELP.txt" />
         <option value="$PROJECT_DIR$/oficial.txt" />
         <option value="$PROJECT_DIR$/scripts/my_retrain.py" />
+        <option value="$PROJECT_DIR$/commands.txt" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/scripts/retrain.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="312" />
-    <option name="width" value="1346" />
+    <option name="x" value="12" />
+    <option name="width" value="1336" />
     <option name="height" value="736" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -177,6 +183,35 @@
               <item name="Flora" type="b2602c69:ProjectViewProjectNode" />
               <item name="Flora" type="462c0819:PsiDirectoryNode" />
               <item name="tf_files" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Flora" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Flora" type="462c0819:PsiDirectoryNode" />
+              <item name="tf_files" type="462c0819:PsiDirectoryNode" />
+              <item name="training_summaries" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Flora" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Flora" type="462c0819:PsiDirectoryNode" />
+              <item name="tf_files" type="462c0819:PsiDirectoryNode" />
+              <item name="training_summaries" type="462c0819:PsiDirectoryNode" />
+              <item name="mobilenet_1.0_224" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Flora" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Flora" type="462c0819:PsiDirectoryNode" />
+              <item name="tf_files" type="462c0819:PsiDirectoryNode" />
+              <item name="training_summaries" type="462c0819:PsiDirectoryNode" />
+              <item name="mobilenet_1.0_224" type="462c0819:PsiDirectoryNode" />
+              <item name="train" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Flora" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Flora" type="462c0819:PsiDirectoryNode" />
+              <item name="tf_files" type="462c0819:PsiDirectoryNode" />
+              <item name="training_summaries" type="462c0819:PsiDirectoryNode" />
+              <item name="mobilenet_1.0_224" type="462c0819:PsiDirectoryNode" />
+              <item name="validation" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -313,10 +348,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1366" height="736" extended-state="6" />
+    <frame x="0" y="312" width="1366" height="736" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21816827" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28518242" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -327,7 +362,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" x="0" y="36" width="1366" height="700" id="Terminal" order="8" type="WINDOWED" weight="0.34375" />
+      <window_info anchor="bottom" x="0" y="31" width="1366" height="705" id="Terminal" order="8" type="WINDOWED" weight="0.34375" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="bottom" id="Messages" order="11" />
@@ -351,13 +386,6 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Makefile" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="23" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HELP.txt" />
     <entry file="file://$PROJECT_DIR$/oficial.txt" />
     <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/tensorflow/python/framework/importer.py">
@@ -480,20 +508,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/retrain.py">
+    <entry file="file:///usr/local/lib/python3.6/dist-packages/sklearn/metrics/classification.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="1194" column="46" selection-start-line="1194" selection-start-column="46" selection-end-line="1194" selection-end-column="46" />
-          <folding>
-            <element signature="e#3585#3623#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="522">
+          <caret line="1264" column="66" selection-start-line="1264" selection-start-column="59" selection-end-line="1264" selection-end-column="66" />
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/lib/python3.6/dist-packages/sklearn/metrics/classification.py">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22428">
-          <caret line="1264" column="66" selection-start-line="1264" selection-start-column="59" selection-end-line="1264" selection-end-column="66" />
+        <state relative-caret-position="456">
+          <caret line="215" column="7" selection-start-line="215" selection-start-column="7" selection-end-line="215" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tf_files/training_summaries/mobilenet_1.0_224/train/events.out.tfevents.1538758619.tiago">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="-1890" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commands.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="432" selection-start-line="1" selection-start-column="410" selection-end-line="1" selection-end-column="432" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/retrain.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1506">
+          <caret line="817" selection-start-line="817" selection-end-line="817" />
+          <folding>
+            <element signature="e#3585#3623#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

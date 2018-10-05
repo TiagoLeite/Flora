@@ -785,9 +785,11 @@ def add_final_training_ops(class_count, final_tensor_name, bottleneck_tensor,
             logits = tf.matmul(bottleneck_input, layer_weights) + layer_biases
             tf.summary.histogram('pre_activations', logits)
 
-    # w2 = tf.Variable(tf.truncated_normal(shape=[512, class_count], stddev=0.001))
-    # b2 = tf.Variable(tf.constant(0.001, shape=[class_count]))
-    # logits = tf.matmul(tf.nn.dropout(tf.nn.tanh(logits), keep_prob=0.5), w2) + b2
+    # w2 = tf.Variable(tf.truncated_normal(shape=[1024, class_count], stddev=0.01))
+    # b2 = tf.Variable(tf.constant(0.01, shape=[class_count]))
+    # logits_2 = tf.matmul(tf.nn.dropout(tf.nn.relu(logits), keep_prob=0.5), w2) + b2
+    # logits_2 = tf.matmul(tf.nn.relu(logits), w2) + b2
+    # log_drop = tf.nn.dropout(logits, keep_prob=0.75)
     final_tensor = tf.nn.softmax(logits, name=final_tensor_name)
     tf.summary.histogram('activations', final_tensor)
 
@@ -1075,7 +1077,8 @@ def main(_):
                 [merged, train_step],
                 feed_dict={bottleneck_input: train_bottlenecks,
                            ground_truth_input: train_ground_truth})
-            train_writer.add_summary(train_summary, i)
+            train_writer.add_summary(train_summary, global_step=i)
+            tf.summary.scalar('step', i)
 
             # Every so often, print out how well the graph is training.
             is_last_step = (i + 1 == FLAGS.how_many_training_steps)
@@ -1248,7 +1251,7 @@ if __name__ == '__main__':
     parser.add_argument(
         '--eval_step_interval',
         type=int,
-        default=10,
+        default=50,
         help='How often to evaluate the training results.'
     )
     parser.add_argument(
@@ -1271,7 +1274,7 @@ if __name__ == '__main__':
     parser.add_argument(
         '--validation_batch_size',
         type=int,
-        default=100,
+        default=-1,
         help="""\
       How many images to use in an evaluation batch. This validation set is
       used much more often than the test set, and is an early indicator of how
