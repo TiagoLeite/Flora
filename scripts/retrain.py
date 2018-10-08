@@ -773,28 +773,27 @@ def add_final_training_ops(class_count, final_tensor_name, bottleneck_tensor,
     with tf.name_scope(layer_name):
         with tf.name_scope('weights'):
             initial_value = tf.truncated_normal(
-                [bottleneck_tensor_size, 512], stddev=0.01)
+                [bottleneck_tensor_size, class_count], stddev=0.01)
 
             layer_weights = tf.Variable(initial_value, name='final_weights')
 
             variable_summaries(layer_weights)
         with tf.name_scope('biases'):
-            layer_biases = tf.Variable(tf.ones([512])/100, name='final_biases')
+            layer_biases = tf.Variable(tf.ones([class_count])/100, name='final_biases')
             variable_summaries(layer_biases)
         with tf.name_scope('Wx_plus_b'):
             logits = tf.matmul(bottleneck_input, layer_weights) + layer_biases
             tf.summary.histogram('pre_activations', logits)
 
-    w2 = tf.Variable(tf.truncated_normal(shape=[512, class_count], stddev=0.01))
-    b2 = tf.Variable(tf.constant(0.01, shape=[class_count]))
-    logits_2 = tf.matmul(tf.nn.dropout(tf.nn.relu(logits), keep_prob=0.75), w2) + b2
-    # logits_2 = tf.matmul(tf.nn.relu(logits), w2) + b2
-    final_tensor = tf.nn.softmax(logits_2, name=final_tensor_name)
-    tf.summary.histogram('activations', final_tensor)
+    # w2 = tf.Variable(tf.truncated_normal(shape=[512, class_count], stddev=0.01))
+    # b2 = tf.Variable(tf.ones([class_count])/100)
+    # logits_2 = tf.matmul(tf.nn.dropout(tf.nn.relu(logits), keep_prob=0.75), w2) + b2
+    final_tensor = tf.nn.softmax(logits, name=final_tensor_name)
+    # tf.summary.histogram('activations', final_tensor)
 
     with tf.name_scope('cross_entropy'):
         cross_entropy = tf.nn.softmax_cross_entropy_with_logits(
-            labels=ground_truth_input, logits=logits_2)
+            labels=ground_truth_input, logits=logits)
         with tf.name_scope('total'):
             cross_entropy_mean = tf.reduce_mean(cross_entropy)
     tf.summary.scalar('cross_entropy', cross_entropy_mean)
@@ -1151,35 +1150,14 @@ def main(_):
         # labels = test_ground_truth
         # predictions = to_categorical(predictions, num_classes=16)
         cm = metrics.confusion_matrix(labels, predictions)
-
-        '''
-        precision = dict()
-        recall = dict()
-        average_precision = dict()
-        for i in range(class_count):
-            precision[i], recall[i], _ = metrics.precision_recall_curve(labels[:, i],
-                                                                        predictions[:, i])
-            average_precision[i] = metrics.average_precision_score(labels[:, i], predictions[:, i])
-
-        # A "micro-average": quantifying score on all classes jointly
-        precision["micro"], recall["micro"], _ = metrics.precision_recall_curve(labels.ravel(),
-                                                                                predictions.ravel())
-        average_precision["micro"] = metrics.average_precision_score(labels, predictions,
-                                                                     average="micro")
-
-        print('Average precision score, micro-averaged over all classes: {0:0.2f}'
-              .format(average_precision["micro"]))'''
-
-        recall = metrics.recall_score(labels, predictions, average=None)
-        precision = metrics.precision_score(labels, predictions, average=None)
-        print("\nRecall   :", recall, "\nPrecision:", precision)
-        print("\nRecall mean:", np.mean(recall))
-        print("Precision m:", np.mean(precision))
-
         recall = metrics.recall_score(labels, predictions, average='macro')
         precision = metrics.precision_score(labels, predictions, average='macro')
+        f_measure = metrics.f1_score(labels, predictions, average='macro')
         print("\nRecall   :  ", recall, "\nPrecision:  ", precision)
+        print("F-measure:  ", f_measure)
         print("Confusion Matrix:\n", cm)
+
+        print(metrics.precision_recall_fscore_support(labels, predictions, average='macro'))
 
 
 if __name__ == '__main__':
@@ -1366,3 +1344,40 @@ if __name__ == '__main__':
       """)
     FLAGS, unparsed = parser.parse_known_args()
     tf.app.run(main=main, argv=[sys.argv[0]] + unparsed)
+
+
+'''
+    precision = dict()
+    recall = dict()
+    average_precision = dict()
+    for i in range(class_count):
+        precision[i], recall[i], _ = metrics.precision_recall_curve(labels[:, i],
+                                                                    predictions[:, i])
+        average_precision[i] = metrics.average_precision_score(labels[:, i], predictions[:, i])
+
+    # A "micro-average": quantifying score on all classes jointly
+    precision["micro"], recall["micro"], _ = metrics.precision_recall_curve(labels.ravel(),
+                                                                            predictions.ravel())
+    average_precision["micro"] = metrics.average_precision_score(labels, predictions,
+                                                                 average="micro")
+
+    print('Average precision score, micro-averaged over all classes: {0:0.2f}'
+          .format(average_precision["micro"]))
+          
+    precision = dict()
+    recall = dict()
+    average_precision = dict()
+    for i in range(class_count):
+        precision[i], recall[i], _ = metrics.precision_recall_curve(labels[:, i],
+                                                                    predictions[:, i])
+        average_precision[i] = metrics.average_precision_score(labels[:, i], predictions[:, i])
+
+    # A "micro-average": quantifying score on all classes jointly
+    precision["micro"], recall["micro"], _ = metrics.precision_recall_curve(labels.ravel(),
+                                                                            predictions.ravel())
+    average_precision["micro"] = metrics.average_precision_score(labels, predictions,
+                                                                 average="micro")
+
+    print('Average precision score, micro-averaged over all classes: {0:0.2f}'
+          .format(average_precision["micro"])) 
+'''
