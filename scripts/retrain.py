@@ -1153,10 +1153,11 @@ def main(_):
         recall = metrics.recall_score(labels, predictions, average='macro')
         precision = metrics.precision_score(labels, predictions, average='macro')
         f_measure = metrics.f1_score(labels, predictions, average='macro')
-        print("\nRecall   :  ", recall, "\nPrecision:  ", precision)
-        print("F-measure:  ", f_measure)
+        print("Accuracy :", test_accuracy)
+        print("Precision:", precision)
+        print("Recall   :", recall)
+        print("F-measure:", f_measure)
         print("Confusion Matrix:\n", cm)
-
         print(metrics.precision_recall_fscore_support(labels, predictions, average='macro'))
 
 

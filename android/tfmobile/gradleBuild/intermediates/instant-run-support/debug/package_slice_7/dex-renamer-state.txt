@@ -1,4 +1,0 @@
-#Sat Jun 02 08:59:00 BRT 2018
-base.0=/home/tiago_leite/tensorflow-for-poets-2/android/tfmobile/gradleBuild/intermediates/transforms/dexMerger/debug/7
-renamed.0=classes.dex
-file.0=/home/tiago_leite/tensorflow-for-poets-2/android/tfmobile/gradleBuild/intermediates/transforms/dexMerger/debug/7/classes.dex
