@@ -787,7 +787,7 @@ def add_final_training_ops(class_count, final_tensor_name, bottleneck_tensor,
 
     w2 = tf.Variable(tf.truncated_normal(shape=[756, class_count], stddev=0.01))
     b2 = tf.Variable(tf.ones([class_count])/100)
-    logits_2 = tf.matmul(tf.nn.dropout(tf.nn.relu(logits), keep_prob=0.75), w2) + b2
+    logits_2 = tf.matmul(tf.nn.dropout(tf.nn.relu(logits), keep_prob=0.5), w2) + b2
     final_tensor = tf.nn.softmax(logits_2, name=final_tensor_name)
     # tf.summary.histogram('activations', final_tensor)
 
