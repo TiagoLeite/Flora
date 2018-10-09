@@ -3,550 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a1029c49-d01f-40b8-870b-2ac80ec90bb8" name="Default Changelist" comment="recall precision form sk learn">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tflite/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tflite/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tflite/Screenshot_CC-BY_by_Felipe_Venancio.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tflite/app/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tflite/app/src/main/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tflite/app/src/main/BUILD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tflite/app/src/main/assets/BUILD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tflite/app/src/main/assets/graph.lite" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tflite/app/src/main/assets/labels.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tflite/app/src/main/java/com/example/android/tflitecamerademo/AutoFitTextureView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tflite/app/src/main/java/com/example/android/tflitecamerademo/Camera2BasicFragment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tflite/app/src/main/java/com/example/android/tflitecamerademo/CameraActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tflite/app/src/main/java/com/example/android/tflitecamerademo/ImageClassifier.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tflite/app/src/main/res/drawable-hdpi/ic_action_info.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tflite/app/src/main/res/drawable-hdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tflite/app/src/main/res/drawable-hdpi/tile.9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tflite/app/src/main/res/drawable-mdpi/ic_action_info.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tflite/app/src/main/res/drawable-mdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tflite/app/src/main/res/drawable-xhdpi/ic_action_info.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tflite/app/src/main/res/drawable-xhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tflite/app/src/main/res/drawable-xxhdpi/ic_action_info.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tflite/app/src/main/res/drawable-xxhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tflite/app/src/main/res/layout-land/fragment_camera2_basic.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tflite/app/src/main/res/layout/activity_camera.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tflite/app/src/main/res/layout/fragment_camera2_basic.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tflite/app/src/main/res/values-sw600dp/template-dimens.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tflite/app/src/main/res/values-sw600dp/template-styles.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tflite/app/src/main/res/values-v11/template-styles.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tflite/app/src/main/res/values-v21/base-colors.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tflite/app/src/main/res/values-v21/base-template-styles.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tflite/app/src/main/res/values/base-strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tflite/app/src/main/res/values/colors.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tflite/app/src/main/res/values/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tflite/app/src/main/res/values/styles.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tflite/app/src/main/res/values/template-dimens.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tflite/app/src/main/res/values/template-styles.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tflite/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tflite/gradle.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tflite/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tflite/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tflite/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tflite/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tflite/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/.gradle/4.4/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/.gradle/4.4/fileContent/fileContent.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/.gradle/4.4/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/.gradle/4.4/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/.gradle/4.4/fileHashes/resourceHashesCache.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/.gradle/4.4/javaCompile/classAnalysis.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/.gradle/4.4/javaCompile/jarAnalysis.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/.gradle/4.4/javaCompile/javaCompile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/.gradle/4.4/javaCompile/taskHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/.gradle/4.4/javaCompile/taskJars.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/.gradle/4.4/taskHistory/taskHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/.gradle/4.4/taskHistory/taskHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/.idea/caches/build_file_checksums.ser" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/.idea/codeStyles/Project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/.idea/libraries/Gradle__org_tensorflow_tensorflow_android_1_8_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/Screenshot_CC-BY_by_Felipe_Venancio.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/assets/.empty" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/assets/graph.pb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/assets/labels.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/bin/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/android-profile/profile-2018-06-02-08-57-05-637.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/android-profile/profile-2018-06-02-08-57-05-637.rawproto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/android-profile/profile-2018-06-02-08-58-18-069.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/android-profile/profile-2018-06-02-08-58-18-069.rawproto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/android-profile/profile-2018-06-02-08-59-03-546.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/android-profile/profile-2018-06-02-08-59-03-546.rawproto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/android-profile/profile-2018-06-02-09-01-14-035.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/android-profile/profile-2018-06-02-09-01-14-035.rawproto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/android-profile/profile-2018-06-02-13-46-52-921.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/android-profile/profile-2018-06-02-13-46-52-921.rawproto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/android-profile/profile-2018-06-02-13-47-15-017.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/android-profile/profile-2018-06-02-13-47-15-017.rawproto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/generated/source/buildConfig/debug/org/tensorflow/demo/BuildConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/generated/source/r/debug/org/tensorflow/demo/R.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/generated/source/r/debug/tensorflow/contrib/android/R.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/assets/debug/graph.pb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/assets/debug/labels.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/blame/res/debug/multi-v2/debug.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/blame/res/debug/multi-v2/values-sw600dp-v13.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/blame/res/debug/multi-v2/values-v11.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/blame/res/debug/multi-v2/values-v14.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/blame/res/debug/multi-v2/values-v21.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/blame/res/debug/multi-v2/values.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/blame/res/debug/single/debug.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/build-info/debug/build-info.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/classes/debug/org/tensorflow/demo/AutoFitTextureView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/classes/debug/org/tensorflow/demo/BuildConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/classes/debug/org/tensorflow/demo/CameraActivity$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/classes/debug/org/tensorflow/demo/CameraActivity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/classes/debug/org/tensorflow/demo/CameraConnectionFragment$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/classes/debug/org/tensorflow/demo/CameraConnectionFragment$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/classes/debug/org/tensorflow/demo/CameraConnectionFragment$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/classes/debug/org/tensorflow/demo/CameraConnectionFragment$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/classes/debug/org/tensorflow/demo/CameraConnectionFragment$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/classes/debug/org/tensorflow/demo/CameraConnectionFragment$CompareSizesByArea.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/classes/debug/org/tensorflow/demo/CameraConnectionFragment$ConnectionCallback.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/classes/debug/org/tensorflow/demo/CameraConnectionFragment$ErrorDialog$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/classes/debug/org/tensorflow/demo/CameraConnectionFragment$ErrorDialog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/classes/debug/org/tensorflow/demo/CameraConnectionFragment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/classes/debug/org/tensorflow/demo/Classifier$Recognition.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/classes/debug/org/tensorflow/demo/Classifier.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/classes/debug/org/tensorflow/demo/ClassifierActivity$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/classes/debug/org/tensorflow/demo/ClassifierActivity$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/classes/debug/org/tensorflow/demo/ClassifierActivity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/classes/debug/org/tensorflow/demo/OverlayView$DrawCallback.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/classes/debug/org/tensorflow/demo/OverlayView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/classes/debug/org/tensorflow/demo/R$attr.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/classes/debug/org/tensorflow/demo/R$color.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/classes/debug/org/tensorflow/demo/R$dimen.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/classes/debug/org/tensorflow/demo/R$drawable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/classes/debug/org/tensorflow/demo/R$id.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/classes/debug/org/tensorflow/demo/R$layout.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/classes/debug/org/tensorflow/demo/R$string.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/classes/debug/org/tensorflow/demo/R$style.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/classes/debug/org/tensorflow/demo/R$styleable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/classes/debug/org/tensorflow/demo/R.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/classes/debug/org/tensorflow/demo/RecognitionScoreView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/classes/debug/org/tensorflow/demo/ResultsView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/classes/debug/org/tensorflow/demo/TensorFlowImageClassifier$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/classes/debug/org/tensorflow/demo/TensorFlowImageClassifier.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/classes/debug/org/tensorflow/demo/env/BorderedText.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/classes/debug/org/tensorflow/demo/env/ImageUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/classes/debug/org/tensorflow/demo/env/Logger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/classes/debug/org/tensorflow/demo/env/Size.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/classes/debug/org/tensorflow/demo/env/SplitTimer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/classes/debug/tensorflow/contrib/android/R.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental-classes/debug/instant-run-bootstrap.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental-runtime-classes/debug/instant-run.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental-verifier/debug/org/tensorflow/demo/AutoFitTextureView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental-verifier/debug/org/tensorflow/demo/BuildConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental-verifier/debug/org/tensorflow/demo/CameraActivity$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental-verifier/debug/org/tensorflow/demo/CameraActivity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental-verifier/debug/org/tensorflow/demo/CameraConnectionFragment$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental-verifier/debug/org/tensorflow/demo/CameraConnectionFragment$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental-verifier/debug/org/tensorflow/demo/CameraConnectionFragment$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental-verifier/debug/org/tensorflow/demo/CameraConnectionFragment$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental-verifier/debug/org/tensorflow/demo/CameraConnectionFragment$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental-verifier/debug/org/tensorflow/demo/CameraConnectionFragment$CompareSizesByArea.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental-verifier/debug/org/tensorflow/demo/CameraConnectionFragment$ConnectionCallback.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental-verifier/debug/org/tensorflow/demo/CameraConnectionFragment$ErrorDialog$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental-verifier/debug/org/tensorflow/demo/CameraConnectionFragment$ErrorDialog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental-verifier/debug/org/tensorflow/demo/CameraConnectionFragment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental-verifier/debug/org/tensorflow/demo/Classifier$Recognition.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental-verifier/debug/org/tensorflow/demo/Classifier.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental-verifier/debug/org/tensorflow/demo/ClassifierActivity$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental-verifier/debug/org/tensorflow/demo/ClassifierActivity$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental-verifier/debug/org/tensorflow/demo/ClassifierActivity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental-verifier/debug/org/tensorflow/demo/OverlayView$DrawCallback.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental-verifier/debug/org/tensorflow/demo/OverlayView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental-verifier/debug/org/tensorflow/demo/R$attr.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental-verifier/debug/org/tensorflow/demo/R$color.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental-verifier/debug/org/tensorflow/demo/R$dimen.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental-verifier/debug/org/tensorflow/demo/R$drawable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental-verifier/debug/org/tensorflow/demo/R$id.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental-verifier/debug/org/tensorflow/demo/R$layout.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental-verifier/debug/org/tensorflow/demo/R$string.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental-verifier/debug/org/tensorflow/demo/R$style.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental-verifier/debug/org/tensorflow/demo/R$styleable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental-verifier/debug/org/tensorflow/demo/R.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental-verifier/debug/org/tensorflow/demo/RecognitionScoreView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental-verifier/debug/org/tensorflow/demo/ResultsView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental-verifier/debug/org/tensorflow/demo/TensorFlowImageClassifier$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental-verifier/debug/org/tensorflow/demo/TensorFlowImageClassifier.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental-verifier/debug/org/tensorflow/demo/env/BorderedText.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental-verifier/debug/org/tensorflow/demo/env/ImageUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental-verifier/debug/org/tensorflow/demo/env/Logger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental-verifier/debug/org/tensorflow/demo/env/Size.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental-verifier/debug/org/tensorflow/demo/env/SplitTimer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental-verifier/debug/tensorflow/contrib/android/R.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental/compileDebugAidl/dependency.store" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental/debug-mergeJavaRes/merge-state" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental/debug-mergeJavaRes/zip-cache/VSZpl6elIka5YWQwX2nwZ4VNEhg=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental/debug-mergeJniLibs/merge-state" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental/debug-mergeJniLibs/zip-cache/VSZpl6elIka5YWQwX2nwZ4VNEhg=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental/mergeDebugAssets/merger.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental/mergeDebugResources/compile-file-map.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental/mergeDebugResources/merged.dir/values-sw600dp-v13/values-sw600dp-v13.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental/mergeDebugResources/merged.dir/values-v11/values-v11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental/mergeDebugResources/merged.dir/values-v14/values-v14.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental/mergeDebugResources/merged.dir/values-v21/values-v21.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental/mergeDebugResources/merger.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental/mergeDebugShaders/merger.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental/packageDebug/debug/dex-renamer-state.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental/packageDebug/debug/file-input-save-data.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental/packageDebug/debug/zip-cache/uPJpNEQnhKkxtYUUH_3hJz9P+JM=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental/packageInstantRunResourcesDebug/debug/dex-renamer-state.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental/packageInstantRunResourcesDebug/debug/file-input-save-data.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/incremental/packageInstantRunResourcesDebug/debug/zip-cache/uPJpNEQnhKkxtYUUH_3hJz9P+JM=" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/instant-run-resources/output.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/instant-run-resources/resources-debug.ir.ap_" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/instant-run-support/debug/dependencies/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/instant-run-support/debug/manifestChecker/manifest.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/instant-run-support/debug/manifestChecker/manifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/instant-run-support/debug/package_dependencies/dex-renamer-state.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/instant-run-support/debug/package_slice_0/dex-renamer-state.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/instant-run-support/debug/package_slice_1/dex-renamer-state.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/instant-run-support/debug/package_slice_2/dex-renamer-state.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/instant-run-support/debug/package_slice_3/dex-renamer-state.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/instant-run-support/debug/package_slice_4/dex-renamer-state.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/instant-run-support/debug/package_slice_5/dex-renamer-state.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/instant-run-support/debug/package_slice_6/dex-renamer-state.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/instant-run-support/debug/package_slice_7/dex-renamer-state.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/instant-run-support/debug/package_slice_8/dex-renamer-state.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/instant-run-support/debug/package_slice_9/dex-renamer-state.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/instant-run-support/debug/slice_0/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/instant-run-support/debug/slice_1/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/instant-run-support/debug/slice_2/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/instant-run-support/debug/slice_3/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/instant-run-support/debug/slice_4/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/instant-run-support/debug/slice_5/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/instant-run-support/debug/slice_6/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/instant-run-support/debug/slice_7/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/instant-run-support/debug/slice_8/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/instant-run-support/debug/slice_9/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/javaPrecompile/debug/annotationProcessors.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/manifests/density/debug/output.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/manifests/full/debug/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/manifests/full/debug/output.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/manifests/instant-run/debug/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/manifests/instant-run/debug/output.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/res/debug/output.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/res/debug/resources-debug.ap_" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/res/merged/debug/drawable-hdpi_ic_action_info.png.flat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/res/merged/debug/drawable-hdpi_ic_launcher.png.flat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/res/merged/debug/drawable-hdpi_tile.9.png.flat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/res/merged/debug/drawable-mdpi_ic_action_info.png.flat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/res/merged/debug/drawable-mdpi_ic_launcher.png.flat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/res/merged/debug/drawable-xhdpi_ic_action_info.png.flat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/res/merged/debug/drawable-xhdpi_ic_launcher.png.flat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/res/merged/debug/drawable-xxhdpi_ic_action_info.png.flat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/res/merged/debug/drawable-xxhdpi_ic_launcher.png.flat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/res/merged/debug/layout_activity_camera.xml.flat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/res/merged/debug/layout_camera_connection_fragment.xml.flat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/res/merged/debug/layout_camera_connection_fragment_stylize.xml.flat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/res/merged/debug/layout_camera_connection_fragment_tracking.xml.flat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/res/merged/debug/values-sw600dp-v13_values-sw600dp-v13.arsc.flat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/res/merged/debug/values-v11_values-v11.arsc.flat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/res/merged/debug/values-v14_values-v14.arsc.flat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/res/merged/debug/values-v21_values-v21.arsc.flat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/res/merged/debug/values_values.arsc.flat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/res/symbol-table-with-package/debug/package-aware-r.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/split-apk/debug/dep/dependencies.apk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/split-apk/debug/slices/slice_0.apk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/split-apk/debug/slices/slice_1.apk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/split-apk/debug/slices/slice_2.apk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/split-apk/debug/slices/slice_3.apk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/split-apk/debug/slices/slice_4.apk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/split-apk/debug/slices/slice_5.apk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/split-apk/debug/slices/slice_6.apk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/split-apk/debug/slices/slice_7.apk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/split-apk/debug/slices/slice_8.apk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/split-apk/debug/slices/slice_9.apk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/splits-support/debug/split-list.gson" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/symbols/debug/R.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/11.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/15/com/android/tools/ir/dummy/slice_0.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/16/com/android/tools/ir/dummy/slice_1.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/17/com/android/tools/ir/dummy/slice_2.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/18/com/android/tools/ir/dummy/slice_3.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/18/org/tensorflow/demo/env/BorderedText.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/18/org/tensorflow/demo/env/ImageUtils.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/18/org/tensorflow/demo/env/Logger.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/18/org/tensorflow/demo/env/Size.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/18/org/tensorflow/demo/env/SplitTimer.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/19/com/android/tools/ir/dummy/slice_4.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/20/com/android/tools/ir/dummy/slice_5.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/21/com/android/tools/ir/dummy/slice_6.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/22/com/android/tools/ir/dummy/slice_7.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/22/org/tensorflow/demo/AutoFitTextureView.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/22/org/tensorflow/demo/BuildConfig.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/22/org/tensorflow/demo/CameraActivity$1.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/22/org/tensorflow/demo/CameraActivity.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/22/org/tensorflow/demo/CameraConnectionFragment$1.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/22/org/tensorflow/demo/CameraConnectionFragment$2.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/22/org/tensorflow/demo/CameraConnectionFragment$3.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/22/org/tensorflow/demo/CameraConnectionFragment$4.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/22/org/tensorflow/demo/CameraConnectionFragment$5.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/22/org/tensorflow/demo/CameraConnectionFragment$CompareSizesByArea.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/22/org/tensorflow/demo/CameraConnectionFragment$ConnectionCallback.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/22/org/tensorflow/demo/CameraConnectionFragment$ErrorDialog$1.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/22/org/tensorflow/demo/CameraConnectionFragment$ErrorDialog.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/22/org/tensorflow/demo/CameraConnectionFragment.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/22/org/tensorflow/demo/Classifier$Recognition.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/22/org/tensorflow/demo/Classifier.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/22/org/tensorflow/demo/ClassifierActivity$1.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/22/org/tensorflow/demo/ClassifierActivity$2.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/22/org/tensorflow/demo/ClassifierActivity.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/22/org/tensorflow/demo/OverlayView$DrawCallback.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/22/org/tensorflow/demo/OverlayView.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/22/org/tensorflow/demo/R$attr.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/22/org/tensorflow/demo/R$color.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/22/org/tensorflow/demo/R$dimen.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/22/org/tensorflow/demo/R$drawable.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/22/org/tensorflow/demo/R$id.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/22/org/tensorflow/demo/R$layout.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/22/org/tensorflow/demo/R$string.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/22/org/tensorflow/demo/R$style.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/22/org/tensorflow/demo/R$styleable.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/22/org/tensorflow/demo/R.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/22/org/tensorflow/demo/RecognitionScoreView.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/22/org/tensorflow/demo/ResultsView.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/22/org/tensorflow/demo/TensorFlowImageClassifier$1.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/22/org/tensorflow/demo/TensorFlowImageClassifier.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/23/com/android/tools/ir/dummy/slice_8.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/23/tensorflow/contrib/android/R.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/24/com/android/tools/ir/dummy/slice_9.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/4.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/5.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/6.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/7.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/9.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexBuilder/debug/__content__.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexMerger/debug/0/classes.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexMerger/debug/1/classes.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexMerger/debug/10/classes.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexMerger/debug/11/classes.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexMerger/debug/12/classes.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexMerger/debug/13/classes.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexMerger/debug/14/classes.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexMerger/debug/15/classes.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexMerger/debug/16/classes.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexMerger/debug/2/classes.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexMerger/debug/3/classes.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexMerger/debug/4/classes.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexMerger/debug/5/classes.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexMerger/debug/6/classes.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexMerger/debug/7/classes.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexMerger/debug/8/classes.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexMerger/debug/9/classes.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/dexMerger/debug/__content__.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/externalLibsDexMerger/debug/0/classes.dex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/externalLibsDexMerger/debug/__content__.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/extractJars/debug/__content__.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRun/debug/0/org/tensorflow/demo/AutoFitTextureView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRun/debug/0/org/tensorflow/demo/BuildConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRun/debug/0/org/tensorflow/demo/CameraActivity$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRun/debug/0/org/tensorflow/demo/CameraActivity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRun/debug/0/org/tensorflow/demo/CameraConnectionFragment$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRun/debug/0/org/tensorflow/demo/CameraConnectionFragment$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRun/debug/0/org/tensorflow/demo/CameraConnectionFragment$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRun/debug/0/org/tensorflow/demo/CameraConnectionFragment$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRun/debug/0/org/tensorflow/demo/CameraConnectionFragment$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRun/debug/0/org/tensorflow/demo/CameraConnectionFragment$CompareSizesByArea.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRun/debug/0/org/tensorflow/demo/CameraConnectionFragment$ConnectionCallback.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRun/debug/0/org/tensorflow/demo/CameraConnectionFragment$ErrorDialog$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRun/debug/0/org/tensorflow/demo/CameraConnectionFragment$ErrorDialog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRun/debug/0/org/tensorflow/demo/CameraConnectionFragment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRun/debug/0/org/tensorflow/demo/Classifier$Recognition.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRun/debug/0/org/tensorflow/demo/Classifier.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRun/debug/0/org/tensorflow/demo/ClassifierActivity$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRun/debug/0/org/tensorflow/demo/ClassifierActivity$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRun/debug/0/org/tensorflow/demo/ClassifierActivity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRun/debug/0/org/tensorflow/demo/OverlayView$DrawCallback.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRun/debug/0/org/tensorflow/demo/OverlayView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRun/debug/0/org/tensorflow/demo/R$attr.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRun/debug/0/org/tensorflow/demo/R$color.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRun/debug/0/org/tensorflow/demo/R$dimen.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRun/debug/0/org/tensorflow/demo/R$drawable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRun/debug/0/org/tensorflow/demo/R$id.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRun/debug/0/org/tensorflow/demo/R$layout.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRun/debug/0/org/tensorflow/demo/R$string.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRun/debug/0/org/tensorflow/demo/R$style.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRun/debug/0/org/tensorflow/demo/R$styleable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRun/debug/0/org/tensorflow/demo/R.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRun/debug/0/org/tensorflow/demo/RecognitionScoreView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRun/debug/0/org/tensorflow/demo/ResultsView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRun/debug/0/org/tensorflow/demo/TensorFlowImageClassifier$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRun/debug/0/org/tensorflow/demo/TensorFlowImageClassifier.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRun/debug/0/org/tensorflow/demo/env/BorderedText.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRun/debug/0/org/tensorflow/demo/env/ImageUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRun/debug/0/org/tensorflow/demo/env/Logger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRun/debug/0/org/tensorflow/demo/env/Size.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRun/debug/0/org/tensorflow/demo/env/SplitTimer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRun/debug/0/tensorflow/contrib/android/R.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRun/debug/__content__.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunDependenciesApk/debug/__content__.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/0/com/android/tools/ir/dummy/slice_0.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/1/com/android/tools/ir/dummy/slice_1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/2/com/android/tools/ir/dummy/slice_2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/3/com/android/tools/ir/dummy/slice_3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/3/org/tensorflow/demo/env/BorderedText.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/3/org/tensorflow/demo/env/ImageUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/3/org/tensorflow/demo/env/Logger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/3/org/tensorflow/demo/env/Size.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/3/org/tensorflow/demo/env/SplitTimer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/4/com/android/tools/ir/dummy/slice_4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/5/com/android/tools/ir/dummy/slice_5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/6/com/android/tools/ir/dummy/slice_6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/7/com/android/tools/ir/dummy/slice_7.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/7/org/tensorflow/demo/AutoFitTextureView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/7/org/tensorflow/demo/BuildConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/7/org/tensorflow/demo/CameraActivity$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/7/org/tensorflow/demo/CameraActivity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/7/org/tensorflow/demo/CameraConnectionFragment$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/7/org/tensorflow/demo/CameraConnectionFragment$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/7/org/tensorflow/demo/CameraConnectionFragment$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/7/org/tensorflow/demo/CameraConnectionFragment$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/7/org/tensorflow/demo/CameraConnectionFragment$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/7/org/tensorflow/demo/CameraConnectionFragment$CompareSizesByArea.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/7/org/tensorflow/demo/CameraConnectionFragment$ConnectionCallback.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/7/org/tensorflow/demo/CameraConnectionFragment$ErrorDialog$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/7/org/tensorflow/demo/CameraConnectionFragment$ErrorDialog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/7/org/tensorflow/demo/CameraConnectionFragment.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/7/org/tensorflow/demo/Classifier$Recognition.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/7/org/tensorflow/demo/Classifier.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/7/org/tensorflow/demo/ClassifierActivity$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/7/org/tensorflow/demo/ClassifierActivity$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/7/org/tensorflow/demo/ClassifierActivity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/7/org/tensorflow/demo/OverlayView$DrawCallback.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/7/org/tensorflow/demo/OverlayView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/7/org/tensorflow/demo/R$attr.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/7/org/tensorflow/demo/R$color.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/7/org/tensorflow/demo/R$dimen.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/7/org/tensorflow/demo/R$drawable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/7/org/tensorflow/demo/R$id.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/7/org/tensorflow/demo/R$layout.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/7/org/tensorflow/demo/R$string.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/7/org/tensorflow/demo/R$style.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/7/org/tensorflow/demo/R$styleable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/7/org/tensorflow/demo/R.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/7/org/tensorflow/demo/RecognitionScoreView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/7/org/tensorflow/demo/ResultsView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/7/org/tensorflow/demo/TensorFlowImageClassifier$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/7/org/tensorflow/demo/TensorFlowImageClassifier.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/8/com/android/tools/ir/dummy/slice_8.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/8/tensorflow/contrib/android/R.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/9/com/android/tools/ir/dummy/slice_9.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicer/debug/__content__.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/instantRunSlicesApk/debug/__content__.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/mergeJavaRes/debug/0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/mergeJavaRes/debug/__content__.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/mergeJniLibs/debug/0/lib/arm64-v8a/libtensorflow_inference.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/mergeJniLibs/debug/0/lib/armeabi-v7a/libtensorflow_inference.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/mergeJniLibs/debug/0/lib/x86/libtensorflow_inference.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/mergeJniLibs/debug/0/lib/x86_64/libtensorflow_inference.so" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/intermediates/transforms/mergeJniLibs/debug/__content__.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/outputs/apk/debug/output.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/outputs/apk/debug/tfmobile-debug.apk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradleBuild/outputs/logs/manifest-merger-debug-report.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/local.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/res/drawable-hdpi/ic_action_info.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/res/drawable-hdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/res/drawable-hdpi/tile.9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/res/drawable-mdpi/ic_action_info.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/res/drawable-mdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/res/drawable-xhdpi/ic_action_info.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/res/drawable-xhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/res/drawable-xxhdpi/ic_action_info.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/res/drawable-xxhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/res/layout/activity_camera.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/res/layout/camera_connection_fragment.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/res/layout/camera_connection_fragment_stylize.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/res/layout/camera_connection_fragment_tracking.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/res/values-sw600dp/template-dimens.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/res/values-sw600dp/template-styles.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/res/values-v11/styles.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/res/values-v11/template-styles.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/res/values-v14/styles.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/res/values-v21/base-colors.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/res/values-v21/base-template-styles.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/res/values/attrs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/res/values/base-strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/res/values/colors.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/res/values/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/res/values/styles.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/res/values/template-dimens.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/res/values/template-styles.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/sample_images/classify1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/sample_images/detect1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/sample_images/stylize1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/src/org/tensorflow/demo/AutoFitTextureView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/src/org/tensorflow/demo/CameraActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/src/org/tensorflow/demo/CameraConnectionFragment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/src/org/tensorflow/demo/Classifier.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/src/org/tensorflow/demo/ClassifierActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/src/org/tensorflow/demo/OverlayView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/src/org/tensorflow/demo/RecognitionScoreView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/src/org/tensorflow/demo/ResultsView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/src/org/tensorflow/demo/TensorFlowImageClassifier.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/src/org/tensorflow/demo/env/BorderedText.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/src/org/tensorflow/demo/env/ImageUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/src/org/tensorflow/demo/env/Logger.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/src/org/tensorflow/demo/env/Size.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/src/org/tensorflow/demo/env/SplitTimer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/tfmobile/tfmobile.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/tflite/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/tflite/AppIcon.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/tflite/AppIcon.xcassets/AppIcon.appiconset/logo-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/tflite/AppIcon.xcassets/AppIcon.appiconset/logo-10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/tflite/AppIcon.xcassets/AppIcon.appiconset/logo-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/tflite/AppIcon.xcassets/AppIcon.appiconset/logo-12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/tflite/AppIcon.xcassets/AppIcon.appiconset/logo-13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/tflite/AppIcon.xcassets/AppIcon.appiconset/logo-14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/tflite/AppIcon.xcassets/AppIcon.appiconset/logo-15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/tflite/AppIcon.xcassets/AppIcon.appiconset/logo-16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/tflite/AppIcon.xcassets/AppIcon.appiconset/logo-17.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/tflite/AppIcon.xcassets/AppIcon.appiconset/logo-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/tflite/AppIcon.xcassets/AppIcon.appiconset/logo-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/tflite/AppIcon.xcassets/AppIcon.appiconset/logo-4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/tflite/AppIcon.xcassets/AppIcon.appiconset/logo-5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/tflite/AppIcon.xcassets/AppIcon.appiconset/logo-6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/tflite/AppIcon.xcassets/AppIcon.appiconset/logo-7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/tflite/AppIcon.xcassets/AppIcon.appiconset/logo-8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/tflite/AppIcon.xcassets/AppIcon.appiconset/logo-9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/tflite/AppIcon.xcassets/AppIcon.appiconset/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/tflite/AppIcon.xcassets/Contents.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/tflite/CameraExampleAppDelegate.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/tflite/CameraExampleAppDelegate.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/tflite/CameraExampleViewController.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/tflite/CameraExampleViewController.mm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/tflite/Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/tflite/MainStoryboard_iPhone.storyboard" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/tflite/Podfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/tflite/data/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/tflite/data/graph.lite" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/tflite/data/labels.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/tflite/main.mm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/tflite/tflite_photos_example.xcodeproj/project.pbxproj" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/retrain.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/retrain.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tf_files/retrained_graph_100.pb" beforeDir="false" afterPath="$PROJECT_DIR$/tf_files/retrained_graph_100.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tf_files/retrained_graph_75.pb" beforeDir="false" afterPath="$PROJECT_DIR$/tf_files/retrained_graph_75.pb" afterDir="false" />
@@ -602,8 +58,8 @@
           <entry key="Makefile" value="64" />
           <entry key="dummy" value="24" />
           <entry key="gitignore" value="38" />
-          <entry key="py" value="1462" />
-          <entry key="txt" value="166" />
+          <entry key="py" value="1476" />
+          <entry key="txt" value="198" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -621,8 +77,8 @@
       <usages-collector id="statistics.vcs.git.usages" />
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="292" />
-          <entry key="Python" value="1462" />
+          <entry key="PLAIN_TEXT" value="324" />
+          <entry key="Python" value="1476" />
         </counts>
       </usages-collector>
     </session>
@@ -632,8 +88,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/retrain.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="1157" column="21" lean-forward="true" selection-start-line="1157" selection-start-column="21" selection-end-line="1157" selection-end-column="21" />
+            <state relative-caret-position="365">
+              <caret line="789" column="72" selection-start-line="789" selection-start-column="72" selection-end-line="789" selection-end-column="72" />
               <folding>
                 <element signature="e#3585#3623#0" expanded="true" />
               </folding>
@@ -710,7 +166,6 @@
       <find>scalar</find>
       <find>tf.summary.scalar</find>
       <find>drop</find>
-      <find>dropo</find>
       <find>final test</find>
       <find>validation</find>
       <find>validation acc</find>
@@ -718,6 +173,7 @@
       <find>valida</find>
       <find>split</find>
       <find>accura</find>
+      <find>dropo</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -909,7 +365,49 @@
       <option name="project" value="LOCAL" />
       <updated>1538847025577</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="acc added, no mobile files">
+      <created>1539031672515</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1539031672516</updated>
+    </task>
+    <task id="LOCAL-00013" summary="drop">
+      <created>1539033242939</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1539033242939</updated>
+    </task>
+    <task id="LOCAL-00014" summary="recall precision form sk learn">
+      <created>1539047711461</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1539047711462</updated>
+    </task>
+    <task id="LOCAL-00015" summary="recall precision form sk learn">
+      <created>1539047986087</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1539047986087</updated>
+    </task>
+    <task id="LOCAL-00016" summary="recall precision form sk learn">
+      <created>1539050122501</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1539050122501</updated>
+    </task>
+    <task id="LOCAL-00017" summary="recall precision form sk learn">
+      <created>1539051357785</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1539051357785</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -927,7 +425,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" x="1920" y="378" width="1366" height="705" id="Terminal" order="8" type="WINDOWED" weight="0.34375" />
+      <window_info anchor="bottom" x="1920" y="379" width="1366" height="704" id="Terminal" order="8" type="WINDOWED" weight="0.34375" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="bottom" id="Messages" order="11" />
@@ -946,6 +444,8 @@
     <MESSAGE value="fine tune" />
     <MESSAGE value="confusion matrix added" />
     <MESSAGE value="biases" />
+    <MESSAGE value="acc added, no mobile files" />
+    <MESSAGE value="drop" />
     <MESSAGE value="recall precision form sk learn" />
     <option name="LAST_COMMIT_MESSAGE" value="recall precision form sk learn" />
   </component>
@@ -1107,8 +607,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/retrain.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="1157" column="21" lean-forward="true" selection-start-line="1157" selection-start-column="21" selection-end-line="1157" selection-end-column="21" />
+        <state relative-caret-position="365">
+          <caret line="789" column="72" selection-start-line="789" selection-start-column="72" selection-end-line="789" selection-end-column="72" />
           <folding>
             <element signature="e#3585#3623#0" expanded="true" />
           </folding>
