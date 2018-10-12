@@ -211,10 +211,13 @@ pyvenv.cfg
 pip-selfcheck.json
 
 tf_files/training_summaries/*
-tf_files/*.pb
+
+tf_files/retrained_graph_25.pb
+tf_files/retrained_graph_50.pb
+tf_files/retrained_graph_75.pb
+tf_files/retrained_graph_100.pb
+
 
 .idea/*
-
-Artigos/*
 
 # End of https://www.gitignore.io/api/python,pycharm+all
