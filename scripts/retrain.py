@@ -773,27 +773,26 @@ def add_final_training_ops(class_count, final_tensor_name, bottleneck_tensor,
     with tf.name_scope(layer_name):
         with tf.name_scope('weights'):
             initial_value = tf.truncated_normal(
-                [bottleneck_tensor_size, 512], stddev=0.01)
+                [bottleneck_tensor_size, class_count], stddev=0.01)
 
             layer_weights = tf.Variable(initial_value, name='final_weights')
-
             variable_summaries(layer_weights)
         with tf.name_scope('biases'):
-            layer_biases = tf.Variable(tf.ones([512])/100, name='final_biases')
+            layer_biases = tf.Variable(tf.ones([class_count])/100, name='final_biases')
             variable_summaries(layer_biases)
         with tf.name_scope('Wx_plus_b'):
             logits = tf.matmul(bottleneck_input, layer_weights) + layer_biases
             tf.summary.histogram('pre_activations', logits)
 
-    w2 = tf.Variable(tf.truncated_normal(shape=[512, class_count], stddev=0.01))
-    b2 = tf.Variable(tf.ones([class_count])/100)
-    logits_2 = tf.matmul(tf.nn.dropout(tf.nn.relu(logits), keep_prob=0.75), w2) + b2
-    final_tensor = tf.nn.softmax(logits_2, name=final_tensor_name)
+    # w2 = tf.Variable(tf.truncated_normal(shape=[512, class_count], stddev=0.01))
+    # b2 = tf.Variable(tf.ones([class_count])/100)
+    # logits_2 = tf.matmul(tf.nn.dropout(tf.nn.relu(logits), keep_prob=0.75), w2) + b2
+    final_tensor = tf.nn.softmax(logits, name=final_tensor_name)
     # tf.summary.histogram('activations', final_tensor)
 
     with tf.name_scope('cross_entropy'):
         cross_entropy = tf.nn.softmax_cross_entropy_with_logits(
-            labels=ground_truth_input, logits=logits_2)
+            labels=ground_truth_input, logits=logits)
         with tf.name_scope('total'):
             cross_entropy_mean = tf.reduce_mean(cross_entropy)
     tf.summary.scalar('cross_entropy', cross_entropy_mean)
