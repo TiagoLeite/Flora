@@ -13,3 +13,5 @@ python3 -m scripts.retrain --bottleneck_dir=tf_files/bottlenecks_25 --how_many_t
 # board:
 python3 plot_chart.py
 tensorboard --logdir=logs
+
+
