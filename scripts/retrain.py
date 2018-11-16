@@ -736,7 +736,7 @@ def variable_summaries(var):
 
 
 def add_final_training_ops(class_count, final_tensor_name, bottleneck_tensor,
-                           bottleneck_tensor_size):
+                           bottleneck_tensor_shape):
     """Adds a new softmax and fully-connected layer for training.
 
   We need to retrain the top layer to identify our new classes, so this function
@@ -751,7 +751,7 @@ def add_final_training_ops(class_count, final_tensor_name, bottleneck_tensor,
     recognize.
     final_tensor_name: Name string for the new final node that produces results.
     bottleneck_tensor: The output of the main CNN graph.
-    bottleneck_tensor_size: How many entries in the bottleneck vector.
+    bottleneck_tensor_shape: shape of the bottleneck tensor
 
   Returns:
     The tensors for the training and cross entropy results, and tensors for the
@@ -760,7 +760,7 @@ def add_final_training_ops(class_count, final_tensor_name, bottleneck_tensor,
     with tf.name_scope('input'):
         bottleneck_input = tf.placeholder_with_default(
             bottleneck_tensor,
-            shape=[None, bottleneck_tensor_size],
+            shape=bottleneck_tensor_shape,
             name='BottleneckInputPlaceholder')
 
         ground_truth_input = tf.placeholder(tf.float32,
@@ -773,20 +773,19 @@ def add_final_training_ops(class_count, final_tensor_name, bottleneck_tensor,
     with tf.name_scope(layer_name):
         with tf.name_scope('weights'):
             initial_value = tf.truncated_normal(
-                [bottleneck_tensor_size, class_count], stddev=0.01)
-
+                bottleneck_tensor_shape, stddev=0.01)
             layer_weights = tf.Variable(initial_value, name='final_weights')
             variable_summaries(layer_weights)
         with tf.name_scope('biases'):
-            layer_biases = tf.Variable(tf.ones([class_count])/100, name='final_biases')
+            layer_biases = tf.Variable(tf.ones([])/100, name='final_biases')
             variable_summaries(layer_biases)
         with tf.name_scope('Wx_plus_b'):
             logits = tf.matmul(bottleneck_input, layer_weights) + layer_biases
             tf.summary.histogram('pre_activations', logits)
 
-    # w2 = tf.Variable(tf.truncated_normal(shape=[512, class_count], stddev=0.01))
+    # w2 = tf.Variable(tf.truncated_normal(shape=[256, class_count], stddev=0.01))
     # b2 = tf.Variable(tf.ones([class_count])/100)
-    # logits_2 = tf.matmul(tf.nn.dropout(tf.nn.relu(logits), keep_prob=0.75), w2) + b2
+    # logits_2 = tf.matmul((tf.nn.relu(logits)), w2) + b2
     final_tensor = tf.nn.softmax(logits, name=final_tensor_name)
     # tf.summary.histogram('activations', final_tensor)
 
@@ -910,6 +909,7 @@ def create_model_info(architecture):
         data_url = 'http://download.tensorflow.org/models/mobilenet_v1_'
         data_url += version_string + '_' + size_string + '_frozen.tgz'
         bottleneck_tensor_name = 'MobilenetV1/Predictions/Reshape:0'
+        # bottleneck_tensor_name = 'MobilenetV1/Conv2d_6_depthwise/depthwise_weights:0'
         bottleneck_tensor_size = 1001
         input_width = int(size_string)
         input_height = int(size_string)
@@ -931,6 +931,7 @@ def create_model_info(architecture):
         'data_url': data_url,
         'bottleneck_tensor_name': bottleneck_tensor_name,
         'bottleneck_tensor_size': bottleneck_tensor_size,
+        'bottleneck_tensor_shape': [None, bottleneck_tensor_size],
         'input_width': input_width,
         'input_height': input_height,
         'input_depth': input_depth,
@@ -988,6 +989,10 @@ def main(_):
     graph, bottleneck_tensor, resized_image_tensor = (
         create_model_graph(model_info))
 
+    # sess = tf.Session()
+    for op in graph.get_operations():
+        print(op.name, op.values())
+
     # Look at the folder structure, and create lists of all the images.
     image_lists = create_image_lists(FLAGS.image_dir, FLAGS.testing_percentage,
                                      FLAGS.validation_percentage)
@@ -1033,7 +1038,7 @@ def main(_):
         (train_step, cross_entropy, bottleneck_input, ground_truth_input,
          final_tensor) = add_final_training_ops(
             len(image_lists.keys()), FLAGS.final_tensor_name, bottleneck_tensor,
-            model_info['bottleneck_tensor_size'])
+            model_info['bottleneck_tensor_shape'])
 
         # Create the operations we need to evaluate the accuracy of our new layer.
         evaluation_step, prediction = add_evaluation_step(
