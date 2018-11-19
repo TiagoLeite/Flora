@@ -277,14 +277,15 @@ def create_model_graph(model_info):
         with gfile.FastGFile(model_path, 'rb') as f:
             graph_def = tf.GraphDef()
             graph_def.ParseFromString(f.read())
-            bottleneck_tensor, resized_input_tensor = (tf.import_graph_def(
+            bottleneck_tensor, resized_input_tensor, input_tensor = (tf.import_graph_def(
                 graph_def,
                 name='',
                 return_elements=[
                     model_info['bottleneck_tensor_name'],
                     model_info['resized_input_tensor_name'],
+                    model_info['input_tensor_name'],
                 ]))
-    return graph, bottleneck_tensor, resized_input_tensor
+    return graph, bottleneck_tensor, resized_input_tensor, input_tensor
 
 
 def run_bottleneck_on_image(sess, image_data, image_data_tensor,
@@ -734,8 +735,8 @@ def variable_summaries(var):
         tf.summary.histogram('histogram', var)
 
 
-def add_final_training_ops(class_count, final_tensor_name, bottleneck_tensor,
-                           input_shape, output_shape):
+def add_final_training_ops(class_count, input_tensor, final_tensor_name, bottleneck_tensor,
+                           bottle_input_shape, output_shape):
     """Adds a new softmax and fully-connected layer for training.
 
   We need to retrain the top layer to identify our new classes, so this function
@@ -760,7 +761,7 @@ def add_final_training_ops(class_count, final_tensor_name, bottleneck_tensor,
         bottleneck_input = tf.placeholder_with_default(
             bottleneck_tensor,
             # shape=[None, bottleneck_tensor_size],
-            shape=input_shape,
+            shape=bottle_input_shape,
             name='BottleneckInputPlaceholder')
 
         ground_truth_input = tf.placeholder(tf.float32,
@@ -913,7 +914,7 @@ def create_model_info(architecture):
         input_width = int(size_string)
         input_height = int(size_string)
         input_depth = 3
-        resized_input_tensor_name = 'input:0'
+        input_tensor_name = 'input:0'
         if is_quantized:
             model_base_name = 'quantized_graph.pb'
         else:
@@ -934,6 +935,7 @@ def create_model_info(architecture):
         'input_height': input_height,
         'input_depth': input_depth,
         'resized_input_tensor_name': resized_input_tensor_name,
+        'input_tensor_name': input_tensor_name,
         'model_file_name': model_file_name,
         'input_mean': input_mean,
         'input_std': input_std,
@@ -984,8 +986,7 @@ def main(_):
 
     # Set up the pre-trained graph.
     maybe_download_and_extract(model_info['data_url'])
-    graph, bottleneck_tensor, resized_image_tensor = (
-        create_model_graph(model_info))
+    graph, bottleneck_tensor, resized_image_tensor, input_tensor = (create_model_graph(model_info))
 
     # Look at the folder structure, and create lists of all the images.
     image_lists = create_image_lists(FLAGS.image_dir, FLAGS.testing_percentage,
@@ -1034,7 +1035,7 @@ def main(_):
         # Add the new layer that we'll be training.
         (train_step, cross_entropy, bottleneck_input, ground_truth_input,
          final_tensor) = add_final_training_ops(
-            len(image_lists.keys()), FLAGS.final_tensor_name, bottleneck_tensor,
+            len(image_lists.keys()), input_tensor, FLAGS.final_tensor_name, bottleneck_tensor,
             [None, model_info['bottleneck_tensor_size']],
             [model_info['bottleneck_tensor_size'], len(image_lists.keys())])
 
