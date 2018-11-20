@@ -18,7 +18,7 @@ mobile = keras.applications.mobilenet.MobileNet()
 
 # print(mobile.summary())
 
-x = mobile.layers[-6].output
+x = mobile.layers[-1].output
 pred = Dense(24, activation='softmax')(x)
 model = Model(inputs=mobile.input, outputs=pred)
 # print(model.summary())
@@ -31,7 +31,7 @@ print('Layers:', len(model.layers))
 model.compile(optimizer=keras.optimizers.Adam(lr=10e-4), loss='categorical_crossentropy',
               metrics=['accuracy'])
 model.fit_generator(train_batches, steps_per_epoch=46, validation_data=valid_batches,
-                    validation_steps=537//16, epochs=10, verbose=2)
+                    validation_steps=537//16, epochs=100, verbose=2)
 
 
 
