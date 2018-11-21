@@ -12,8 +12,8 @@ print('Size: ' + str(len(lines)))
 for line in lines:
     specie = line.replace("\n", '')
     print("\n===== " + specie + " (" + str(cont) + ")" + " ========")
-    os.system("googleimagesdownload --keywords " + "\"" + specie + " flower\"" + " --limit 100")
-    # os.system("googleimagesdownload --keywords " + "\"" + specie + " flower closer\" --limit 100 --size large")
+    os.system("googleimagesdownload --keywords " + "\"" + specie + " flower closer\"" + " --limit 100 --size large --format jpg")
+    os.system("googleimagesdownload --keywords " + "\"" + specie + " flower\"" + " --limit 100 --format jpg")
     # os.system("googleimagesdownload --keywords " + "\"" + specie + " flower closer\" --limit 100 --size medium")
     cont += 1
 
