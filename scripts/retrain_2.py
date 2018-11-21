@@ -25,8 +25,8 @@ model = Model(inputs=mobile.input, outputs=pred)
 
 print('Layers:', len(model.layers))
 
-# for layer in model.layers[:-5]:
-#    layer.trainable = False
+for layer in model.layers[:-16]:
+    layer.trainable = False
 
 model.compile(optimizer=keras.optimizers.Adam(lr=10e-4), loss='categorical_crossentropy',
               metrics=['accuracy'])
