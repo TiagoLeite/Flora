@@ -31,7 +31,7 @@ for layer in model.layers[:-5]:
 model.compile(optimizer=keras.optimizers.Adam(lr=10e-4), loss='categorical_crossentropy',
               metrics=['accuracy'])
 model.fit_generator(train_batches, steps_per_epoch=46, validation_data=valid_batches,
-                    validation_steps=537//16, epochs=10, verbose=2)
+                    validation_steps=537//16, epochs=500, verbose=2)
 
 
 
