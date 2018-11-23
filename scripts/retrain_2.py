@@ -16,7 +16,7 @@ valid_batches = ImageDataGenerator(preprocessing_function=keras.applications.mob
 
 mobile = keras.applications.mobilenet.MobileNet()
 
-# print(mobile.summary())
+print(mobile.summary())
 
 x = mobile.layers[-6].output
 pred = Dense(24, activation='softmax')(x)
