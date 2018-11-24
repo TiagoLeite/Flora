@@ -67,21 +67,19 @@
       \frametitle{Introdução}
       \framesubtitle{Contextualização e motivação}
         \begin{itemize}
-          \item Modelos \textit{deep learning} têm sido aplicados em diversos problemas atualmente:
+          \item<1-> Modelos \textit{deep learning} têm sido aplicados em diversos problemas atualmente:
           \begin{itemize} 
-			\item Classificação de imagens	         
-	         \item Séries temporais
-	         \item Processamento de linguagem natural	      
+			\item<1-> Classificação de imagens	         
+	        \item<1-> Séries temporais
+	        \item<1-> Processamento de linguagem natural	      
 	      \end{itemize}
-          
-          \item Em classificação de imagens, redes convolucionais são os modelos mais bem-sucedidos.
- 			 
-		 \item Crescente surgimento de aplicativos inteligentes para smartphones:
+         \item<2-> Em classificação de imagens, redes convolucionais são os modelos mais bem-sucedidos.	 
+		 \item<3-> Crescente surgimento de aplicativos inteligentes para smartphones:
 		 \begin{itemize} 
-			\item Filtros artísticos        
-	         \item Detecção de rostos   
+			\item<3-> Filtros artísticos        
+	        \item<3-> Detecção de rostos   
 	      \end{itemize}
-	      \item Existência de modelos de redes convolucionais otimizados para dispositivos móveis, como a redMobileNet 				           \cite{mobilenet}		 
+	      \item<4-> Existência de modelos de redes convolucionais otimizados para dispositivos móveis, como a redMobileNet 				           \cite{mobilenet}		 
         \end{itemize}
     \end{frame}
     
@@ -90,11 +88,11 @@
       \framesubtitle{Objetivos}
       Este trabalho teve como objetivo:\medskip
       \begin{enumerate}        
-        \item Treinamento de variações de rede MobileNet utilizando tranferência de conhecimento;        
+        \item<1-> Treinamento de 8 variações de rede MobileNet, utilizando transferência de conhecimento;        
         \medskip 
-        \item Análise do desempenho de classificação das redes treinadas;       
+        \item<2-> Análise do desempenho de classificação das redes treinadas;       
         \medskip        
-        \item Criação de um aplicativo Android para classificação de espécies de flores em imagens, utilizando o melhor modelo 			obtido.
+        \item<3-> Criação de um aplicativo Android para classificação de espécies de flores em imagens, utilizando o melhor modelo obtido.
         \medskip
       \end{enumerate}
     \end{frame}
@@ -102,44 +100,53 @@
     \section{Métodos} %4min
     \begin{frame}
       \frametitle{Métodos}
-      \framesubtitle{Subtítulo1}      	      
-      % \begin{figure}[hbt]
-      %  \begin{center}
-      %  \caption{computer-1209641~\cite{computer-1209641}}
-      %  \includegraphics[width=0.70\textwidth]{img/computer-1209641_1280.jpg}
-      %  \end{center}
-      %\end{figure}
+      \framesubtitle{Linguagens e tecnologias utilizadas}      
+	  \begin{itemize}
+        \item<1-> Treinamento das redes: \medskip
+	    		\begin{itemize}
+	    			\item<1-> Python versão 3.5;\medskip
+	    			\item<1-> Biblioteca TensorFlow versão 1.10.0.\medskip
+	    		\end{itemize}  
+      \end{itemize}	
+      \begin{itemize}
+        \item<2-> Implementação do aplicativo: \medskip
+	    		\begin{itemize}
+	    			\item<2-> Ambiente Android Studio (Java); \medskip
+	    			\item<2-> TensorFlow para Android versão 1.10.0. \medskip	    			
+	    		\end{itemize}  
+      \end{itemize}			      
     \end{frame}
         
     \begin{frame}
       \frametitle{Métodos}
-      \framesubtitle{Subtítulo2}    
-      \begin{figure}[htb]
-        \begin{center}
-          \caption{computer-2346764~\cite{computer-2346764}}
-          \includegraphics[width=0.25\textwidth]{img/computer-2346764_1280.jpg}
-        \end{center}
-      \end{figure}
-      \bigskip
-      Existem muitas variações disponíveis de passagens de Lorem Ipsum, mas a maioria sofreu algum tipo de alteração, seja por inserção de passagens com humor, ou palavras aleatórias que não parecem nem um pouco convincentes. Se você pretende usar uma passagem de Lorem Ipsum, precisa ter certeza de que não há algo embaraçoso escrito escondido no meio do texto. 
+      \framesubtitle{Métricas de avaliação das redes}
+      \bigskip Avaliação das redes: \medskip     
+	 \begin{itemize}
+		\item<1-> Fase 1: Acurácia das redes no conjunto de validação, durante o treinamento;		        
+        \item<2-> Fase 2: Acurácia, precisão, \textit{recall} e \textit{F-score} \cite{einstein} das 
+        melhores redes da fase 1, no conjunto de teste, após o treinamento. O tamanho final da rede também foi considerado. \medskip
+     \end{itemize}	       
+       
     \end{frame}
-    
-    
+        
     \begin{frame}
       \frametitle{Métodos}
       \framesubtitle{Métodos, Técnicas e Tecnologias Utilizadas}      
         \begin{center}
-            \begin{tabular}{ |c|c|p{7cm}| } 
+            \begin{tabular}{ |c|c|p{5cm}| } 
             \hline
-            Formula & Expressao & Descricao \\
+            Métrica & Expressao & Descricao \\
             \hline
-            \multirow{5}{*}{F1} & \multirow{5}{*}{$\sum_{n=1}^{\infty} 2^{-n}$} & \multirow{5}{7cm}{\footnotesize{Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos.}~\cite{loremipsum}} \\ %linha1
+            \multirow{5}{*}{Acurácia} & \multirow{5}{*}{$\sum_{i=1}^{k}{\frac{tp_{i} + tn_{i}}{tp_{i} +
+             fp_{i}+tn_{i}+fn_{i}}}\ $} & \multirow{5}{5cm}
+             {\footnotesize{Lorem Ipsum}} \\ %linha1
             & & \\ %linha2
             & & \\ %linha3
             & & \\ %linha4
             & & \\ %linha5
             \hline
-            \multirow{3}{*}{F2} & \multirow{3}{*}{$\sum_{n=1}^{\infty} 4^{-n}$} & \multirow{3}{7cm}{\footnotesize{Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado.}~\cite{loremipsum}} \\ %linha1
+            \multirow{5}{*}{Precisão} & \multirow{5}{*}{$\sum_{n=1}^{\infty} 4^{-n}$} & \multirow{5}{5cm}
+            {\footnotesize{Lorem Ipsum}} \\ %linha1
             & & \\ %linha2
             & & \\ %linha3
             \hline
@@ -175,12 +182,12 @@
 	    			\item<4-> Google imagens e Oxford 102 Category Flower Dataset.
 	    			\item<5-> Total de 4713 imagens: 70\% para treinamento, 10\% para validação e 20\% para teste. \medskip
 	    		\end{itemize}
-        \item<3-> Obtenção da rede MobileNet: 
+        \item<6-> Obtenção da rede MobileNet: 
         		\begin{itemize}
-	    			\item<6-> Google AI Blog;
-	    			\item<6-> Modelos já treinados com o conjunto de dados ImageNet; 
-				\item<7-> Tamanho da imagem de entrada: 224x224x3;
-				\item<7-> Tamanhos dos mapas de atributos das camadas de convolução: 25\%, 50\%, 75\% e 100\%.\medskip    		
+	    			\item<7-> Google AI Blog;
+	    			\item<7-> Modelos já treinados com o conjunto de dados ImageNet; 
+				\item<8-> Tamanho da imagem de entrada: 224x224x3;
+				\item<8-> Tamanhos dos mapas de atributos das camadas de convolução: 25\%, 50\%, 75\% e 100\%.\medskip    		
 	    		\end{itemize}     
       \end{itemize}
     \end{frame}
@@ -231,17 +238,12 @@
       \frametitle{Desenvolvimento}
       \framesubtitle{Atividades realizadas}      
       \begin{itemize}
-        \item<1-> Treinamento dos modelos propostos:
+        \item<1-> Treinamento dos modelos propostos: \medskip
 		 \begin{itemize}
-        		\item<2-> Lotes de 100 imagens aleatórias;
+        		\item<2-> Lotes de 100 imagens aleatórias; \medskip
         		\item<3-> 5000 iterações. \bigskip
 		\end{itemize}        
-        \item<4-> Implementação do aplicativo:
-        \begin{itemize} 
-        		\item<5-> Android Studio (Java);
-        		\item<5-> TensorFlow para Android. \bigskip
-        		   
-		\end{itemize}
+        \item<4-> Implementação do aplicativo.
       \end{itemize}
     \end{frame}
         
@@ -249,73 +251,113 @@
     
     \begin{frame}
       \frametitle{Desenvolvimento}
-      \framesubtitle{Resultados e Discussão}
-      
-      \only<1>{
-        Objetivos \bigskip
-        
-        \begin{block}{Objetivos}
-            \begin{itemize}
-              \item Objetivo 1; \medskip
-              \item Objetivo 2.
-            \end{itemize}
-        \end{block}
-      }
-    
-    %%%%%%%%
-    
-      \only<2>{
-          Para a validação foram utilizadas as fórmulas: \\ \medskip
-          \scriptsize{
-          Fórmula 1:
-            \begin{equation}
-            \overline{x} = \frac{1}{n} \ \sum_{i=1}^{n} x_i
-            \end{equation}
-          
-          Fórmula 2:
-            \begin{equation}
-            \sigma_x = \sqrt{\frac{1}{n} \ \sum_{i=1}^{n} (x_i - \overline{x})^2 }
-            \end{equation}
-            }
-      }
-    
+      \framesubtitle{Resultados e Discussão}  \medskip  
+      	Treinamentos e arquitetura escolhida \medskip    
+      	\begin{itemize}
+      		\item Grupo 1
+		\end{itemize}      	  	
+		\begin{figure}[t]
+      		 \begin{minipage}[h]{1.0\linewidth}
+         		\centering
+      			\includegraphics[height=0.42\linewidth]{img/acc_1_5000.png}
+      			\caption{Tiago}
+      		\end{minipage}
+      		\vspace{0.00mm}
+      	\end{figure}	      	       
     \end{frame}
     
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{frame}
+      \frametitle{Desenvolvimento}
+      \framesubtitle{Resultados e Discussão} \medskip       
+      	Treinamentos e arquitetura escolhida \medskip    
+      	\begin{itemize}
+      		\item Grupo 2
+		\end{itemize}      	  	
+		\begin{figure}[t]
+      		 \begin{minipage}[h]{1.0\linewidth}
+         		\centering
+      			\includegraphics[height=0.42\linewidth]{img/acc_2_5000.png}
+      			\caption{Tiago}
+      		\end{minipage}
+      		\vspace{0.00mm}
+      	\end{figure}	      	       
+    \end{frame}
+    
+    \begin{frame}[t]
+    		\frametitle{Desenvolvimento}
+    		\framesubtitle{Resultados e Discussão}
+       	Treinamentos e arquitetura escolhida \medskip    
+    		\begin{itemize}
+      		\item Maiores valores de acurácia para:
+			\begin{itemize}
+				\item Grupo 1: MobileNet\_1\_75 e MobileNet\_1\_100
+				\item Grupo 2: MobileNet\_2\_75 e MobileNet\_2\_100 \medskip
+			\end{itemize}	      		
+		\end{itemize}		
+		\visible<2->
+		{
+			Avaliação das duas melhores arquiteturas de cada grupo no conjunto de teste:
+			\visible<3->
+			{
+				\begin{figure}[hbt]
+      	 		\begin{center}
+      			\includegraphics[height=.2 \textwidth]{img/all_metrics_2.png}
+      			\end{center}
+      			\caption{Resumos~\cite{computer-1209641}}
+      			\end{figure}	
+			}
+		}       	      	
+    \end{frame}
+	
+	\begin{frame}[t]
+    		\frametitle{Desenvolvimento}
+    		\framesubtitle{Resultados e Discussão}		
+		Aplicativo
+		\begin{figure}[hbt]
+      	 		\begin{center}
+      			\includegraphics[height=.45 \textwidth]{img/print1.png}
+      			\end{center}
+      			\caption{Resumos~\cite{computer-1209641}}
+      			\end{figure}	
+    \end{frame}  
+    
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%% Conclusão
     \section{Conclusão}
-    
-    \begin{frame}
+      \begin{frame}[t]
       \frametitle{Conclusão}
-      \framesubtitle{Limitações \& Trabalhos Futuros}
-      
-      Limitações:
+      Contribuições:
       \begin{itemize}
-        \item Limitação 1;
-        \item Limitação 2;
-        \item Limitação 3.
+      	\item<1-> Confirmação da possibilidade de reutilização, refinamento e manipulação de modelos de redes neurais convolucionais, pré-treinados, para classificação de imagens aplicadas a um contexto mais específico.
+		\item<2-> Demonstração da utilização, em ambiente Android, do modelo treinado, através de um aplicativo que pode ser usado por qualquer pessoa.
+		\item<3-> Colaboração da difusão de conhecimentos de botânica.
+      \end{itemize}       
+        
+    \end{frame}
+    
+    \begin{frame}[t]
+      \frametitle{Conclusão}
+      Dificuldades e Limitações:
+      \begin{itemize}
+        \item<1-> Indisponibildade de hardware (GPU) para treinamento mais rápido das redes, o que inviabilizou 
+        a experimentação de diversos parâmetros;
+        \item<2-> Ocorrência de erros na execução da rede no aplicativo devido à mudança de linguagem (Python $\rightarrow${} Java);
+	    \item<3-> Conjunto de dados limitado.  
       \end{itemize}
       
-      \bigskip
+      \bigskip    
+      \visible<4->
+      {
+      	Trabalhos futuros:
+     	\begin{itemize}
+        	\item<4-> Treinamento de camadas de convolução e aumento do conjunto de dados e do número de classes;
+        	\item<5-> Colaboração do usuário na expansão do conjunto de dados.
+      	\end{itemize}
+      }
       
-      Trabalhos Futuros:
-      \begin{itemize}
-        \item Trabalhos Futuros 1~\cite{knuth-fa};
-        \item Trabalhos Futuros 2.
-      \end{itemize}
     \end{frame}
     
     %%%%%%%%
-    
-    \begin{frame}
-      \frametitle{Conclusão}
-      \framesubtitle{Contribuições}
-        Contribuições\\
-        Lorem Ipsum é um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma página quando estiver examinando sua diagramação.
-        \cite{latexcompanion}.
         
-        Agradecimentos ao ICMC~\cite{icmc}.
-    \end{frame}
-    
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%
     \section{Referências}
     
