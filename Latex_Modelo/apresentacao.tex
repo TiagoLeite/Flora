@@ -38,7 +38,7 @@
 % Add a date and possibly the name of the event to the slides
 %  - again first a short version to be shown at the bottom of each slide
 %  - second the full date and event name for the title slide
-\date[dd/mm/aaaa]{\footnotesize{28 de Novembro de 2018}}
+\date[28/11/2018]{\footnotesize{28 de Novembro de 2018}}
 
 \AtBeginSection[]
 {
@@ -62,31 +62,40 @@
     % highlighted. Note that the number of sections determines the size of the top 
     % bar, and hence the university name and logo. If you do not add any sections 
     % they will not be visible.
-    \section{Introdução} %2min
-    
+    \section{Introdução} %2min   
     \begin{frame}
       \frametitle{Introdução}
       \framesubtitle{Contextualização e motivação}
         \begin{itemize}
-          \item Métodos de aprendizado de máquina baseados em deep learning têm se mostrado eficazes em diversas tarefas como análise de sinais de áudio, previsão de séries temporais, processamento de linguagem natural e, especialmente, em classificação de imagens, que é o foco deste trabalho.
-          \bigskip
-          \item Meu item 2
+          \item Modelos \textit{deep learning} têm sido aplicados em diversos problemas atualmente:
+          \begin{itemize} 
+			\item Classificação de imagens	         
+	         \item Séries temporais
+	         \item Processamento de linguagem natural	      
+	      \end{itemize}
+          
+          \item Em classificação de imagens, redes convolucionais são os modelos mais bem-sucedidos.
+ 			 
+		 \item Crescente surgimento de aplicativos inteligentes para smartphones:
+		 \begin{itemize} 
+			\item Filtros artísticos        
+	         \item Detecção de rostos   
+	      \end{itemize}
+	      \item Existência de modelos de redes convolucionais otimizados para dispositivos móveis, como a redMobileNet 				           \cite{mobilenet}		 
         \end{itemize}
     \end{frame}
-    
     
     \begin{frame}
       \frametitle{Introdução}
       \framesubtitle{Objetivos}
       Este trabalho teve como objetivo:\medskip
-      \begin{enumerate}
-        \item Objetivo 1;
+      \begin{enumerate}        
+        \item Treinamento e análise do desempenho de variações de rede MobileNet;        
         \medskip
-        \item Objetivo 2;
+        \item Verificar e eficácia da utilização de tranferência de conhecimento no treinamento;
         \medskip
-        \item Objetivo 3;
+        \item Criação de um aplicativo Android para classificação de espécies de flores em imagens, utilizando o melhor modelo obtido.
         \medskip
-        \item Objetivo 4.
       \end{enumerate}
     \end{frame}
     
@@ -94,15 +103,17 @@
     \begin{frame}
       \frametitle{Métodos}
       \framesubtitle{Subtítulo1}
-      \begin{figure}[hbt]
-        \begin{center}
-        \caption{computer-1209641~\cite{computer-1209641}}
-        \includegraphics[width=0.70\textwidth]{img/computer-1209641_1280.jpg}
-        \end{center}
-      \end{figure}
+      
+			
+	      
+      % \begin{figure}[hbt]
+      %  \begin{center}
+      %  \caption{computer-1209641~\cite{computer-1209641}}
+      %  \includegraphics[width=0.70\textwidth]{img/computer-1209641_1280.jpg}
+      %  \end{center}
+      %\end{figure}
     \end{frame}
-    
-    
+        
     \begin{frame}
       \frametitle{Métodos}
       \framesubtitle{Subtítulo2}
@@ -147,12 +158,12 @@
     
     \begin{frame}
       \frametitle{Desenvolvimento}
-      \framesubtitle{O Problema}
-    
+      \framesubtitle{Descrição do Problema}
       \begin{itemize}    
-            \item Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            \item Donec sagittis purus blandit dictum pretium.
-            \item Aliquam vitae tellus in magna varius scelerisque.
+            \item Obtenção e criação de variações da rede MobileNet.
+            \item Realização do treinamento das redes criadas, utilizando transferência de conhecimento.
+            \item Comparação entre as redes treinadas.
+            \item Implementação do aplicativo e utilização do melhor modelo.
             \end{itemize}
     \end{frame}
     
@@ -160,13 +171,18 @@
     
     \begin{frame}
       \frametitle{Desenvolvimento}
-      \framesubtitle{Atividades Realizadas}
+      \framesubtitle{Atividades realizadas}
       
       \begin{itemize}
-        \item<1-> Atividades 1; \medskip
-        \item<2-> Atividades 2; \medskip
-        \item<3-> Atividades 3; \medskip
-        \item<4-> Atividades 4.
+        \item<1-> Levantamento das espécies de flores mais comuns nas redondezas;\medskip
+	    \item<2-> Obtenção do conjunto de dados de treinamento;
+	    		\begin{itemize}
+	    			\item 16 classes.
+	    			\item Google imagens e Oxford 102 Category Flower Dataset.
+	    		\end{itemize}
+        \item<3-> Atividades 2; \medskip
+        \item<4-> Atividades 3; \medskip
+        \item<5-> Atividades 4.
       \end{itemize}
     \end{frame}
     
