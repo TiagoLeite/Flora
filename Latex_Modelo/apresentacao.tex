@@ -90,11 +90,11 @@
       \framesubtitle{Objetivos}
       Este trabalho teve como objetivo:\medskip
       \begin{enumerate}        
-        \item Treinamento e análise do desempenho de variações de rede MobileNet;        
-        \medskip
-        \item Verificar e eficácia da utilização de tranferência de conhecimento no treinamento;
-        \medskip
-        \item Criação de um aplicativo Android para classificação de espécies de flores em imagens, utilizando o melhor modelo obtido.
+        \item Treinamento de variações de rede MobileNet utilizando tranferência de conhecimento;        
+        \medskip 
+        \item Análise do desempenho de classificação das redes treinadas;       
+        \medskip        
+        \item Criação de um aplicativo Android para classificação de espécies de flores em imagens, utilizando o melhor modelo 			obtido.
         \medskip
       \end{enumerate}
     \end{frame}
@@ -102,10 +102,7 @@
     \section{Métodos} %4min
     \begin{frame}
       \frametitle{Métodos}
-      \framesubtitle{Subtítulo1}
-      
-			
-	      
+      \framesubtitle{Subtítulo1}      	      
       % \begin{figure}[hbt]
       %  \begin{center}
       %  \caption{computer-1209641~\cite{computer-1209641}}
@@ -116,8 +113,7 @@
         
     \begin{frame}
       \frametitle{Métodos}
-      \framesubtitle{Subtítulo2}
-    
+      \framesubtitle{Subtítulo2}    
       \begin{figure}[htb]
         \begin{center}
           \caption{computer-2346764~\cite{computer-2346764}}
@@ -131,8 +127,7 @@
     
     \begin{frame}
       \frametitle{Métodos}
-      \framesubtitle{Métodos, Técnicas e Tecnologias Utilizadas}
-      
+      \framesubtitle{Métodos, Técnicas e Tecnologias Utilizadas}      
         \begin{center}
             \begin{tabular}{ |c|c|p{7cm}| } 
             \hline
@@ -153,14 +148,14 @@
       
     \end{frame}
     
-    %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \section{Desenvolvimento}
-    
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%% ======== Desenvolvimento
+    \section{Desenvolvimento}    
     \begin{frame}
       \frametitle{Desenvolvimento}
       \framesubtitle{Descrição do Problema}
       \begin{itemize}    
-            \item Obtenção e criação de variações da rede MobileNet.
+			\item Obtenção de um conjunto de dados de imagens para treinamento, validação e teste            
+            \item Criação de variações da rede MobileNet.
             \item Realização do treinamento das redes criadas, utilizando transferência de conhecimento.
             \item Comparação entre as redes treinadas.
             \item Implementação do aplicativo e utilização do melhor modelo.
@@ -171,21 +166,85 @@
     
     \begin{frame}
       \frametitle{Desenvolvimento}
-      \framesubtitle{Atividades realizadas}
-      
+      \framesubtitle{Atividades realizadas}      
       \begin{itemize}
-        \item<1-> Levantamento das espécies de flores mais comuns nas redondezas;\medskip
-	    \item<2-> Obtenção do conjunto de dados de treinamento;
+        \item<1-> Levantamento das espécies de flores mais comuns nas redondezas do câmpus;\medskip
+	    \item<2-> Obtenção do conjunto de dados:
 	    		\begin{itemize}
-	    			\item 16 classes.
-	    			\item Google imagens e Oxford 102 Category Flower Dataset.
+	    			\item<3-> 16 classes;
+	    			\item<4-> Google imagens e Oxford 102 Category Flower Dataset.
+	    			\item<5-> Total de 4713 imagens: 70\% para treinamento, 10\% para validação e 20\% para teste. \medskip
 	    		\end{itemize}
-        \item<3-> Atividades 2; \medskip
-        \item<4-> Atividades 3; \medskip
-        \item<5-> Atividades 4.
+        \item<3-> Obtenção da rede MobileNet: 
+        		\begin{itemize}
+	    			\item<6-> Google AI Blog;
+	    			\item<6-> Modelos já treinados com o conjunto de dados ImageNet; 
+				\item<7-> Tamanho da imagem de entrada: 224x224x3;
+				\item<7-> Tamanhos dos mapas de atributos das camadas de convolução: 25\%, 50\%, 75\% e 100\%.\medskip    		
+	    		\end{itemize}     
       \end{itemize}
     \end{frame}
     
+     \begin{frame}
+      \frametitle{Desenvolvimento}
+      \framesubtitle{Atividades realizadas}      
+      \begin{itemize}
+        \item<1-> Alterações realizadas: Modelo 1
+        		 \begin{figure}[hbt]
+      		 	\begin{center}
+      				\includegraphics[width=0.8\textwidth]{img/model1.png}
+      			\end{center}
+      			\caption{Modelo 1~\cite{computer-1209641}}
+      		\end{figure}
+      \end{itemize}
+    \end{frame}
+    
+    \begin{frame}
+      \frametitle{Desenvolvimento}
+      \framesubtitle{Atividades realizadas}      
+      \begin{itemize}
+        \item<1-> Alterações realizadas: Modelo 2
+        		 \begin{figure}[hbt]
+      		 	\begin{center}
+      				\includegraphics[height=0.35\textwidth]{img/model2.png}
+      			\end{center}
+      			\caption{Modelo 2~\cite{computer-1209641}}
+      		\end{figure}
+      \end{itemize}
+    \end{frame}
+    
+    \begin{frame}
+      \frametitle{Desenvolvimento}
+      \framesubtitle{Atividades realizadas}      
+      \begin{itemize}
+        \item<1-> Resumo das alterações: \medskip
+        \begin{figure}[hbt]
+      		 	\begin{center}
+      				\includegraphics[height=.3 \textwidth]{img/models_table.png}
+      			\end{center}
+      			\caption{Resumos~\cite{computer-1209641}}
+      		\end{figure}
+      \end{itemize}
+    \end{frame}
+    
+    \begin{frame}
+      \frametitle{Desenvolvimento}
+      \framesubtitle{Atividades realizadas}      
+      \begin{itemize}
+        \item<1-> Treinamento dos modelos propostos:
+		 \begin{itemize}
+        		\item<2-> Lotes de 100 imagens aleatórias;
+        		\item<3-> 5000 iterações. \bigskip
+		\end{itemize}        
+        \item<4-> Implementação do aplicativo:
+        \begin{itemize} 
+        		\item<5-> Android Studio (Java);
+        		\item<5-> TensorFlow para Android. \bigskip
+        		   
+		\end{itemize}
+      \end{itemize}
+    \end{frame}
+        
     %%%%%%%%
     
     \begin{frame}
