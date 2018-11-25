@@ -1,6 +1,6 @@
 \babel@toc {brazil}{}
 \beamer@sectionintoc {1}{Introdu\IeC {\c c}\IeC {\~a}o}{3}{0}{1}
 \beamer@sectionintoc {2}{M\IeC {\'e}todos}{11}{0}{2}
-\beamer@sectionintoc {3}{Desenvolvimento}{17}{0}{3}
-\beamer@sectionintoc {4}{Conclus\IeC {\~a}o}{40}{0}{4}
-\beamer@sectionintoc {5}{Refer\IeC {\^e}ncias}{49}{0}{5}
+\beamer@sectionintoc {3}{Desenvolvimento}{16}{0}{3}
+\beamer@sectionintoc {4}{Conclus\IeC {\~a}o}{37}{0}{4}
+\beamer@sectionintoc {5}{Refer\IeC {\^e}ncias}{46}{0}{5}

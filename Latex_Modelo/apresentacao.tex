@@ -91,6 +91,9 @@
         \item<2-> Análise do desempenho de classificação das redes treinadas;       
         \medskip        
         \item<3-> Criação de um aplicativo Android para classificação de espécies de flores em imagens, utilizando o melhor modelo obtido.
+        \begin{itemize}
+        		\item<3-> Processamento local, sem requerer conexão à Internet.
+        \end{itemize}
         \medskip
       \end{enumerate}
     \end{frame}
@@ -115,7 +118,7 @@
       \end{itemize}			      
     \end{frame}
         
-    \begin{frame}
+    \begin{frame}[t]
       \frametitle{Métodos}
       \framesubtitle{Métricas de avaliação das redes}
       \bigskip Avaliação das redes: \medskip     
@@ -127,7 +130,7 @@
        
     \end{frame}
         
-    \begin{frame}
+    \if false \begin{frame}[t]
       \frametitle{Métodos}
       \framesubtitle{Métodos, Técnicas e Tecnologias Utilizadas}      
         \begin{center}
@@ -150,12 +153,13 @@
             \hline
             \end{tabular}
         \end{center}
-      
     \end{frame}
+    \fi
+    
     
     %%%%%%%%%%%%%%%%%%%%%%%%%%%% ======== Desenvolvimento
     \section{Desenvolvimento}    
-    \begin{frame}
+    \begin{frame}[t]
       \frametitle{Desenvolvimento}
       \framesubtitle{Descrição do Problema}
       \begin{itemize}    
@@ -169,7 +173,7 @@
     
     %%%%%%%%
     
-    \begin{frame}
+    \begin{frame}[t]
       \frametitle{Desenvolvimento}
       \framesubtitle{Atividades realizadas}      
       \begin{itemize}
@@ -177,7 +181,7 @@
 	    \item<2-> Obtenção do conjunto de dados:
 	    		\begin{itemize}
 	    			\item<3-> 16 classes;
-	    			\item<4-> Google imagens e Oxford 102 Category Flower Dataset \cite{oxford}.
+	    			\item<4-> Google Imagens e Oxford 102 Category Flower Dataset \cite{oxford}.
 	    			\item<5-> Total de 4713 imagens: 70\% para treinamento, 10\% para validação e 20\% para teste. \medskip
 	    		\end{itemize}
         \item<6-> Obtenção da rede MobileNet: 
@@ -190,7 +194,7 @@
       \end{itemize}
     \end{frame}
     
-     \begin{frame}
+     \begin{frame}[t]
       \frametitle{Desenvolvimento}
       \framesubtitle{Atividades realizadas}      
       \begin{itemize}
@@ -205,7 +209,7 @@
       \end{itemize}
     \end{frame}
     
-    \begin{frame}
+    \begin{frame}[t]
       \frametitle{Desenvolvimento}
       \framesubtitle{Atividades realizadas}      
       \begin{itemize}
@@ -219,7 +223,7 @@
       \end{itemize}
     \end{frame}
     
-    \begin{frame}
+    \begin{frame}[t]
       \frametitle{Desenvolvimento}
       \framesubtitle{Atividades realizadas}      
       \begin{itemize}
@@ -233,22 +237,28 @@
       \end{itemize}
     \end{frame}
     
-    \begin{frame}
+    \begin{frame}[t]
       \frametitle{Desenvolvimento}
       \framesubtitle{Atividades realizadas}      
       \begin{itemize}
         \item<1-> Treinamento dos modelos propostos: \medskip
 		 \begin{itemize}
-        		\item<2-> Lotes de 100 imagens aleatórias; \medskip
-        		\item<3-> 5000 iterações. \bigskip
+        		\item<1-> Lotes de 100 imagens aleatórias; \medskip
+        		\item<1-> 5000 iterações; \medskip
+        		\item<1-> Acompanhamento em tempo real pela TensorBoard. \medskip
 		\end{itemize}        
-        \item<4-> Implementação do aplicativo.
+        \item<2-> Implementação do aplicativo.\medskip
+        \begin{itemize}
+        		\item<2-> Android Studio;\medskip
+        		\item<2-> Versionamento com Git;\medskip
+        		\item<2-> Banco de dados orientado a objetos Realm.\medskip
+        \end{itemize}
       \end{itemize}
     \end{frame}
         
     %%%%%%%%
     
-    \begin{frame}
+    \begin{frame}[t]
       \frametitle{Desenvolvimento}
       \framesubtitle{Resultados e Discussão}  \medskip  
       	Treinamentos e arquitetura escolhida \medskip    
@@ -265,7 +275,7 @@
       	\end{figure}	      	       
     \end{frame}
     
-    \begin{frame}
+    \begin{frame}[t]
       \frametitle{Desenvolvimento}
       \framesubtitle{Resultados e Discussão} \medskip       
       	Treinamentos e arquitetura escolhida \medskip    
@@ -325,10 +335,10 @@
       \begin{frame}[t]
       \frametitle{Conclusão}
       Contribuições:
-      \begin{itemize}
+      \begin{itemize} \medskip
       	\item<1-> Confirmação da possibilidade de reutilização, refinamento e manipulação de modelos de redes neurais convolucionais, pré-treinados, para classificação de imagens aplicadas a um contexto mais específico.
-		\item<2-> Demonstração da utilização, em ambiente Android, do modelo treinado, através de um aplicativo que pode ser usado por qualquer pessoa.
-		\item<3-> Colaboração da difusão de conhecimentos de botânica.
+		\item<2-> Demonstração da utilização, em ambiente Android, do modelo treinado, através de um aplicativo que pode ser usado por qualquer pessoa. \medskip
+		\item<3-> Colaboração da difusão de conhecimentos de botânica. \medskip
       \end{itemize}       
         
     \end{frame}
