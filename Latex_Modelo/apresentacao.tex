@@ -1,9 +1,7 @@
 \documentclass{beamer}
-
 \usepackage[utf8]{inputenc}
 \usepackage[brazil]{babel}
 \usepackage{graphicx,hyperref,icmc,url}
-
 \usepackage{multirow}
 
 % The title of the presentation:
@@ -79,7 +77,7 @@
 			\item<3-> Filtros artísticos        
 	        \item<3-> Detecção de rostos   
 	      \end{itemize}
-	      \item<4-> Existência de modelos de redes convolucionais otimizados para dispositivos móveis, como a redMobileNet 				           \cite{mobilenet}		 
+	      \item<4-> Existência de modelos de redes convolucionais otimizados para dispositivos móveis, como a rede MobileNet 				           \cite{mobilenet}		 
         \end{itemize}
     \end{frame}
     
@@ -123,7 +121,7 @@
       \bigskip Avaliação das redes: \medskip     
 	 \begin{itemize}
 		\item<1-> Fase 1: Acurácia das redes no conjunto de validação, durante o treinamento;		        
-        \item<2-> Fase 2: Acurácia, precisão, \textit{recall} e \textit{F-score} \cite{einstein} das 
+        \item<2-> Fase 2: Acurácia, precisão, \textit{recall} e \textit{F-score} \cite{sokolova} das 
         melhores redes da fase 1, no conjunto de teste, após o treinamento. O tamanho final da rede também foi considerado. \medskip
      \end{itemize}	       
        
@@ -179,13 +177,13 @@
 	    \item<2-> Obtenção do conjunto de dados:
 	    		\begin{itemize}
 	    			\item<3-> 16 classes;
-	    			\item<4-> Google imagens e Oxford 102 Category Flower Dataset.
+	    			\item<4-> Google imagens e Oxford 102 Category Flower Dataset \cite{oxford}.
 	    			\item<5-> Total de 4713 imagens: 70\% para treinamento, 10\% para validação e 20\% para teste. \medskip
 	    		\end{itemize}
         \item<6-> Obtenção da rede MobileNet: 
         		\begin{itemize}
-	    			\item<7-> Google AI Blog;
-	    			\item<7-> Modelos já treinados com o conjunto de dados ImageNet; 
+	    			\item<7-> Google AI Blog \cite{googleaiblog};
+	    			\item<7-> Modelos já treinados com o conjunto de dados ImageNet \cite{imagenet}; 
 				\item<8-> Tamanho da imagem de entrada: 224x224x3;
 				\item<8-> Tamanhos dos mapas de atributos das camadas de convolução: 25\%, 50\%, 75\% e 100\%.\medskip    		
 	    		\end{itemize}     
@@ -201,7 +199,8 @@
       		 	\begin{center}
       				\includegraphics[width=0.8\textwidth]{img/model1.png}
       			\end{center}
-      			\caption{Modelo 1~\cite{computer-1209641}}
+      			\caption{Esquema do primeiro modelo proposto. Fonte: elaborada pelo autor.}
+  				%\label{fig:birds}
       		\end{figure}
       \end{itemize}
     \end{frame}
@@ -215,7 +214,7 @@
       		 	\begin{center}
       				\includegraphics[height=0.35\textwidth]{img/model2.png}
       			\end{center}
-      			\caption{Modelo 2~\cite{computer-1209641}}
+      			    \caption{Esquema do segundo modelo proposto. Fonte: elaborada pelo autor.}
       		\end{figure}
       \end{itemize}
     \end{frame}
@@ -229,7 +228,7 @@
       		 	\begin{center}
       				\includegraphics[height=.3 \textwidth]{img/models_table.png}
       			\end{center}
-      			\caption{Resumos~\cite{computer-1209641}}
+      			\caption{Modelos de rede testados e suas características. Fonte: elaborada pelo autor.}
       		\end{figure}
       \end{itemize}
     \end{frame}
@@ -260,7 +259,7 @@
       		 \begin{minipage}[h]{1.0\linewidth}
          		\centering
       			\includegraphics[height=0.42\linewidth]{img/acc_1_5000.png}
-      			\caption{Tiago}
+      			\caption{Acurácia das redes do grupo 1, no conjunto de validação, ao longo do treinamento.}
       		\end{minipage}
       		\vspace{0.00mm}
       	\end{figure}	      	       
@@ -277,7 +276,7 @@
       		 \begin{minipage}[h]{1.0\linewidth}
          		\centering
       			\includegraphics[height=0.42\linewidth]{img/acc_2_5000.png}
-      			\caption{Tiago}
+      			\caption{Acurácia das redes do grupo 2, no conjunto de validação, ao longo do treinamento.}
       		\end{minipage}
       		\vspace{0.00mm}
       	\end{figure}	      	       
@@ -303,7 +302,7 @@
       	 		\begin{center}
       			\includegraphics[height=.2 \textwidth]{img/all_metrics_2.png}
       			\end{center}
-      			\caption{Resumos~\cite{computer-1209641}}
+      			\caption{Valores de acurácia, precisão, recall, F-score e tamanho das arquiteturas escolhidas.}
       			\end{figure}	
 			}
 		}       	      	
@@ -317,7 +316,7 @@
       	 		\begin{center}
       			\includegraphics[height=.45 \textwidth]{img/print1.png}
       			\end{center}
-      			\caption{Resumos~\cite{computer-1209641}}
+      			\caption{Capturas de tela do aplicativo. Fonte: elaborada pelo autor.}
       			\end{figure}	
     \end{frame}  
     
@@ -359,13 +358,15 @@
     %%%%%%%%
         
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \section{Referências}
-    
+    \section{Referências}   
     \begin{frame}[allowframebreaks]
       \frametitle{Referência Bibliográfica}
-      \bibliographystyle{siam}
-      
+      \setbeamertemplate{bibliography item}[text]
+      \setbeamercolor{bibliography entry author}{fg=black}
+      \setbeamercolor{bibliography item}{fg=black}
+      \bibliographystyle{siam}      
       \bibliography{referencias}
+
     \end{frame}
     
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%

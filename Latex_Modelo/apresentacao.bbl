@@ -1,0 +1,30 @@
+\begin{thebibliography}{1}
+
+\bibitem{imagenet}
+{\sc J.~Deng, W.~Dong, R.~Socher, L.-J. Li, K.~Li, and L.~Fei-Fei}, {\em
+  {ImageNet: A Large-Scale Hierarchical Image Database}}, in CVPR09, 2009.
+
+\bibitem{googleaiblog}
+{\sc A.~G. Howard and M.~Zhu}, {\em MobileNets: Open-Source Models for
+  Efficient On-Device Vision}, 2017.
+\newblock Disponível em:
+  \url{https://ai.googleblog.com/2017/06/mobilenets-open-source-models-for.html}.
+  Acessado em 3 de setembro de 2018.
+
+\bibitem{mobilenet}
+{\sc A.~G. Howard, M.~Zhu, B.~Chen, D.~Kalenichenko, W.~Wang, T.~Weyand,
+  M.~Andreetto, and H.~Adam}, {\em Mobilenets: Efficient convolutional neural
+  networks for mobile vision applications}, CoRR, abs/1704.04861 (2017).
+
+\bibitem{oxford}
+{\sc M.-E. Nilsback and A.~Zisserman}, {\em 102 Category Flower Dataset}, 2008.
+\newblock Disponível em:
+  \url{http://www.robots.ox.ac.uk/~vgg/data/flowers/102/}. Acessado em 10 de
+  agosto de 2018.
+
+\bibitem{sokolova}
+{\sc M.~Sokolova and G.~Lapalme}, {\em A systematic analysis of performance
+  measures for classification tasks}, Information Processing \& Management, 45
+  (2009), pp.~427 -- 437.
+
+\end{thebibliography}
