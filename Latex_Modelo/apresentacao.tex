@@ -68,17 +68,17 @@
         \begin{itemize}
           \item<1-> Modelos \textit{deep learning} têm sido aplicados em diversos problemas atualmente:
           \begin{itemize} 
-			\item<1-> Classificação de imagens	         
-	        \item<1-> Séries temporais
-	        \item<1-> Processamento de linguagem natural	      
+			\item<1-> Classificação de imagens;	         
+	        \item<1-> Séries temporais;
+	        \item<1-> Processamento de linguagem natural.	      
 	      \end{itemize}
          \item<2-> Em classificação de imagens, redes convolucionais são os modelos mais bem-sucedidos.	 
 		 \item<3-> Crescente surgimento de aplicativos inteligentes para smartphones:
 		 \begin{itemize} 
-			\item<3-> Filtros artísticos        
-	        \item<3-> Detecção de rostos   
+			\item<3-> Filtros artísticos;        
+	        \item<3-> Detecção de faces.  
 	      \end{itemize}
-	      \item<4-> Existência de modelos de redes convolucionais otimizados para dispositivos móveis, como a rede MobileNet 				           \cite{mobilenet}		 
+	      \item<4-> Existência de modelos de redes convolucionais otimizados para dispositivos móveis, como a rede MobileNet 				           \cite{mobilenet}.		 
         \end{itemize}
     \end{frame}
     
@@ -124,7 +124,7 @@
       \framesubtitle{Métricas de avaliação das redes}
       \bigskip Avaliação das redes: \medskip     
 	 \begin{itemize}
-		\item<1-> Fase 1: Acurácia das redes no conjunto de validação, durante o treinamento;		        
+		\item<1-> Fase 1: Acurácia das redes no conjunto de validação, durante o treinamento; \medskip      
         \item<2-> Fase 2: Acurácia, precisão, \textit{recall} e \textit{F-score} \cite{sokolova} das 
         melhores redes da fase 1, no conjunto de teste, após o treinamento. O tamanho final da rede também foi considerado. \medskip
      \end{itemize}	       
@@ -245,7 +245,7 @@
         		\item<1-> 5000 iterações; \medskip
         		\item<1-> Acompanhamento em tempo real pela TensorBoard. \medskip
 		\end{itemize}        
-        \item<2-> Implementação do aplicativo.\medskip
+        \item<2-> Implementação do aplicativo:\medskip
         \begin{itemize}
         		\item<2-> Android Studio;\medskip
         		\item<2-> Versionamento com Git;\medskip
@@ -333,7 +333,10 @@
     		\framesubtitle{Resultados e Discussão}		
 		Aplicativo \medskip
 		\begin{center}
-			 \movie{\includegraphics[width=10.5cm,height=6cm]{img/play.png}}{video/video_tcc.mp4}
+			 \movie[height = 0.6\textwidth, width = 1\textwidth, poster, showcontrols]{
+				\includegraphics[height = 0.6\textwidth, width = 1\textwidth]{img/play.png}			 
+			 }{video/video_tcc.mp4}	
+			 %movie{\includegraphics[height = 0.6\textwidth, width = 1\textwidth, showcontrols]{img/play.png}}{video/video_tcc.mp4}
 		\end{center}
     \end{frame}
     
