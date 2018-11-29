@@ -1,6 +1,6 @@
 import keras
 from keras.preprocessing.image import ImageDataGenerator
-from keras.layers import Dense
+from keras.layers import Dense, Reshape
 from keras.models import Model
 import argparse
 
@@ -24,8 +24,10 @@ def main():
     print(mobile.summary())
 
     x = mobile.layers[FLAGS.layer_to_append].output
-    pred = Dense(16, activation='softmax')(x)
+    reshaped = Reshape(target_shape=[1000], name='tiago_reshape')(x)
+    pred = Dense(16, activation='softmax')(reshaped)
     model = Model(inputs=mobile.input, outputs=pred)
+
     print(model.summary())
 
     print('Layers:', len(model.layers))
@@ -44,12 +46,12 @@ if __name__ == '__main__':
     parser.add_argument(
         '--layer_to_append',
         type=int,
-        default=-2,
+        default=-3,
     )
     parser.add_argument(
         '--layer_to_train',
         type=int,
-        default=-2,
+        default=-1,
     )
     FLAGS, unparsed = parser.parse_known_args()
     main()
