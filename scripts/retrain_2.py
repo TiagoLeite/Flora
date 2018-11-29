@@ -18,7 +18,7 @@ mobile = keras.applications.mobilenet.MobileNet()
 
 print(mobile.summary())
 
-x = mobile.layers[-6].output
+x = mobile.layers[-1].output
 pred = Dense(16, activation='softmax')(x)
 model = Model(inputs=mobile.input, outputs=pred)
 print(model.summary())
