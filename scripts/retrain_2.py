@@ -35,7 +35,7 @@ def main():
     for layer in model.layers[:FLAGS.layer_to_train]:
         layer.trainable = False
 
-    model.compile(optimizer=keras.optimizers.Adam(lr=10e-4), loss='categorical_crossentropy',
+    model.compile(optimizer=keras.optimizers.RMSprop(), loss='categorical_crossentropy',
                   metrics=['accuracy'])
     model.fit_generator(train_batches, steps_per_epoch=46, validation_data=valid_batches,
                         validation_steps=537//100, epochs=500, verbose=2)
