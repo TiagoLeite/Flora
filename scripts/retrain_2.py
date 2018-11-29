@@ -19,7 +19,7 @@ def main():
     valid_batches = ImageDataGenerator(preprocessing_function=keras.applications.mobilenet.preprocess_input). \
         flow_from_directory(valid_path, target_size=(224, 224), batch_size=100)
 
-    mobile = keras.applications.mobilenet.MobileNet(weights='imagenet')
+    mobile = keras.applications.mobilenet.MobileNet(weights=None)
 
     print(mobile.summary())
 
