@@ -24,8 +24,9 @@ def main():
     print(mobile.summary())
 
     x = mobile.layers[FLAGS.layer_to_append].output
-    reshaped = Reshape(target_shape=[1000], name='tiago_reshape')(x)
-    pred = Dense(16, activation='softmax')(reshaped)
+    reshaped = Reshape(target_shape=[1024], name='tiago_reshape')(x)
+    intermediate = Dense(512)(reshaped)
+    pred = Dense(16, activation='softmax')(intermediate)
     model = Model(inputs=mobile.input, outputs=pred)
 
     print(model.summary())
@@ -35,7 +36,7 @@ def main():
     for layer in model.layers[:FLAGS.layer_to_train]:
         layer.trainable = False
 
-    model.compile(optimizer=keras.optimizers.RMSprop(), loss='categorical_crossentropy',
+    model.compile(optimizer=keras.optimizers.Adam(), loss='categorical_crossentropy',
                   metrics=['accuracy'])
     model.fit_generator(train_batches, steps_per_epoch=46, validation_data=valid_batches,
                         validation_steps=537//100, epochs=500, verbose=2)
@@ -46,7 +47,7 @@ if __name__ == '__main__':
     parser.add_argument(
         '--layer_to_append',
         type=int,
-        default=-3,
+        default=-4,
     )
     parser.add_argument(
         '--layer_to_train',
