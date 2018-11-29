@@ -116,7 +116,6 @@ from tensorflow.python.util import compat
 import sklearn.metrics as metrics
 from keras.utils.np_utils import to_categorical
 
-
 FLAGS = None
 
 # These are all parameters that are tied to the particular model architecture
@@ -278,14 +277,15 @@ def create_model_graph(model_info):
         with gfile.FastGFile(model_path, 'rb') as f:
             graph_def = tf.GraphDef()
             graph_def.ParseFromString(f.read())
-            bottleneck_tensor, resized_input_tensor = (tf.import_graph_def(
+            bottleneck_tensor, resized_input_tensor, input_tensor = (tf.import_graph_def(
                 graph_def,
                 name='',
                 return_elements=[
                     model_info['bottleneck_tensor_name'],
                     model_info['resized_input_tensor_name'],
+                    model_info['input_tensor_name'],
                 ]))
-    return graph, bottleneck_tensor, resized_input_tensor
+    return graph, bottleneck_tensor, resized_input_tensor, input_tensor
 
 
 def run_bottleneck_on_image(sess, image_data, image_data_tensor,
@@ -735,8 +735,8 @@ def variable_summaries(var):
         tf.summary.histogram('histogram', var)
 
 
-def add_final_training_ops(class_count, final_tensor_name, bottleneck_tensor,
-                           bottleneck_tensor_shape):
+def add_final_training_ops(class_count, input_tensor, final_tensor_name, bottleneck_tensor,
+                           bottle_input_shape, output_shape):
     """Adds a new softmax and fully-connected layer for training.
 
   We need to retrain the top layer to identify our new classes, so this function
@@ -751,7 +751,7 @@ def add_final_training_ops(class_count, final_tensor_name, bottleneck_tensor,
     recognize.
     final_tensor_name: Name string for the new final node that produces results.
     bottleneck_tensor: The output of the main CNN graph.
-    bottleneck_tensor_shape: shape of the bottleneck tensor
+    bottleneck_tensor_size: How many entries in the bottleneck vector.
 
   Returns:
     The tensors for the training and cross entropy results, and tensors for the
@@ -760,7 +760,8 @@ def add_final_training_ops(class_count, final_tensor_name, bottleneck_tensor,
     with tf.name_scope('input'):
         bottleneck_input = tf.placeholder_with_default(
             bottleneck_tensor,
-            shape=bottleneck_tensor_shape,
+            # shape=[None, bottleneck_tensor_size],
+            shape=bottle_input_shape,
             name='BottleneckInputPlaceholder')
 
         ground_truth_input = tf.placeholder(tf.float32,
@@ -772,20 +773,19 @@ def add_final_training_ops(class_count, final_tensor_name, bottleneck_tensor,
     layer_name = 'final_training_ops'
     with tf.name_scope(layer_name):
         with tf.name_scope('weights'):
-            initial_value = tf.truncated_normal(
-                bottleneck_tensor_shape, stddev=0.01)
+            initial_value = tf.truncated_normal(output_shape, stddev=0.01)
             layer_weights = tf.Variable(initial_value, name='final_weights')
             variable_summaries(layer_weights)
         with tf.name_scope('biases'):
-            layer_biases = tf.Variable(tf.ones([])/100, name='final_biases')
+            layer_biases = tf.Variable(tf.ones([class_count])/100, name='final_biases')
             variable_summaries(layer_biases)
         with tf.name_scope('Wx_plus_b'):
             logits = tf.matmul(bottleneck_input, layer_weights) + layer_biases
             tf.summary.histogram('pre_activations', logits)
 
-    # w2 = tf.Variable(tf.truncated_normal(shape=[256, class_count], stddev=0.01))
+    # w2 = tf.Variable(tf.truncated_normal(shape=[512, class_count], stddev=0.01))
     # b2 = tf.Variable(tf.ones([class_count])/100)
-    # logits_2 = tf.matmul((tf.nn.relu(logits)), w2) + b2
+    # logits_2 = tf.matmul(tf.nn.dropout(tf.nn.relu(logits), keep_prob=0.75), w2) + b2
     final_tensor = tf.nn.softmax(logits, name=final_tensor_name)
     # tf.summary.histogram('activations', final_tensor)
 
@@ -908,13 +908,13 @@ def create_model_info(architecture):
             is_quantized = True
         data_url = 'http://download.tensorflow.org/models/mobilenet_v1_'
         data_url += version_string + '_' + size_string + '_frozen.tgz'
+        # bottleneck_tensor_name = 'MobilenetV1/Predictions/Reshape:0'
         bottleneck_tensor_name = 'MobilenetV1/Predictions/Reshape:0'
-        # bottleneck_tensor_name = 'MobilenetV1/Conv2d_6_depthwise/depthwise_weights:0'
         bottleneck_tensor_size = 1001
         input_width = int(size_string)
         input_height = int(size_string)
         input_depth = 3
-        resized_input_tensor_name = 'input:0'
+        input_tensor_name = 'input:0'
         if is_quantized:
             model_base_name = 'quantized_graph.pb'
         else:
@@ -931,11 +931,11 @@ def create_model_info(architecture):
         'data_url': data_url,
         'bottleneck_tensor_name': bottleneck_tensor_name,
         'bottleneck_tensor_size': bottleneck_tensor_size,
-        'bottleneck_tensor_shape': [None, bottleneck_tensor_size],
         'input_width': input_width,
         'input_height': input_height,
         'input_depth': input_depth,
         'resized_input_tensor_name': resized_input_tensor_name,
+        'input_tensor_name': input_tensor_name,
         'model_file_name': model_file_name,
         'input_mean': input_mean,
         'input_std': input_std,
@@ -986,12 +986,7 @@ def main(_):
 
     # Set up the pre-trained graph.
     maybe_download_and_extract(model_info['data_url'])
-    graph, bottleneck_tensor, resized_image_tensor = (
-        create_model_graph(model_info))
-
-    # sess = tf.Session()
-    for op in graph.get_operations():
-        print(op.name, op.values())
+    graph, bottleneck_tensor, resized_image_tensor, input_tensor = (create_model_graph(model_info))
 
     # Look at the folder structure, and create lists of all the images.
     image_lists = create_image_lists(FLAGS.image_dir, FLAGS.testing_percentage,
@@ -1010,6 +1005,9 @@ def main(_):
     do_distort_images = should_distort_images(
         FLAGS.flip_left_right, FLAGS.random_crop, FLAGS.random_scale,
         FLAGS.random_brightness)
+
+    for op in graph.get_operations():
+        print(op.name, op.values())
 
     with tf.Session(graph=graph) as sess:
         # Set up the image decoding sub-graph.
@@ -1037,8 +1035,9 @@ def main(_):
         # Add the new layer that we'll be training.
         (train_step, cross_entropy, bottleneck_input, ground_truth_input,
          final_tensor) = add_final_training_ops(
-            len(image_lists.keys()), FLAGS.final_tensor_name, bottleneck_tensor,
-            model_info['bottleneck_tensor_shape'])
+            len(image_lists.keys()), input_tensor, FLAGS.final_tensor_name, bottleneck_tensor,
+            [None, model_info['bottleneck_tensor_size']],
+            [model_info['bottleneck_tensor_size'], len(image_lists.keys())])
 
         # Create the operations we need to evaluate the accuracy of our new layer.
         evaluation_step, prediction = add_evaluation_step(
@@ -1350,7 +1349,6 @@ if __name__ == '__main__':
     FLAGS, unparsed = parser.parse_known_args()
     tf.app.run(main=main, argv=[sys.argv[0]] + unparsed)
 
-
 '''
     precision = dict()
     recall = dict()
@@ -1368,7 +1366,7 @@ if __name__ == '__main__':
 
     print('Average precision score, micro-averaged over all classes: {0:0.2f}'
           .format(average_precision["micro"]))
-          
+
     precision = dict()
     recall = dict()
     average_precision = dict()
