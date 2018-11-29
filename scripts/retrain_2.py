@@ -1,6 +1,6 @@
 import keras
 from keras.preprocessing.image import ImageDataGenerator
-from keras.layers import Dense, Reshape,  Dropout
+from keras.layers import Dense, Reshape, Dropout
 from keras.models import Model
 import argparse
 
@@ -12,10 +12,14 @@ FLAGS = None
 
 
 def main():
-    train_batches = ImageDataGenerator(preprocessing_function=keras.applications.mobilenet.preprocess_input). \
+    train_batches = ImageDataGenerator(preprocessing_function=keras.applications.mobilenet.preprocess_input,
+                                       rotation_range=180, width_shift_range=0.2, height_shift_range=0.2,
+                                       horizontal_flip=True, zoom_range=[0.9, 1.25], brightness_range=[0.5, 1.5]). \
         flow_from_directory(train_path, target_size=(224, 224), batch_size=100)
+
     test_batches = ImageDataGenerator(preprocessing_function=keras.applications.mobilenet.preprocess_input). \
         flow_from_directory(test_path, target_size=(224, 224), batch_size=100, shuffle=False)
+
     valid_batches = ImageDataGenerator(preprocessing_function=keras.applications.mobilenet.preprocess_input). \
         flow_from_directory(valid_path, target_size=(224, 224), batch_size=100)
 
@@ -40,7 +44,7 @@ def main():
     model.compile(optimizer=keras.optimizers.Adam(), loss='categorical_crossentropy',
                   metrics=['accuracy'])
     model.fit_generator(train_batches, steps_per_epoch=46, validation_data=valid_batches,
-                        validation_steps=537//100, epochs=100, verbose=2)
+                        validation_steps=537 // 100, epochs=100, verbose=2)
 
 
 if __name__ == '__main__':
