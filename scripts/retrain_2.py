@@ -19,7 +19,7 @@ def main():
     valid_batches = ImageDataGenerator(preprocessing_function=keras.applications.mobilenet.preprocess_input). \
         flow_from_directory(valid_path, target_size=(224, 224), batch_size=100)
 
-    mobile = keras.applications.mobilenet.MobileNet()
+    mobile = keras.applications.mobilenet.MobileNet(weights='imagenet')
 
     print(mobile.summary())
 
@@ -51,7 +51,7 @@ if __name__ == '__main__':
     parser.add_argument(
         '--layer_to_train',
         type=int,
-        default=-1,
+        default=0,
     )
     FLAGS, unparsed = parser.parse_known_args()
     main()
