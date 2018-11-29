@@ -1,6 +1,6 @@
 import keras
 from keras.preprocessing.image import ImageDataGenerator
-from keras.layers import Dense, Reshape
+from keras.layers import Dense, Reshape,  Dropout
 from keras.models import Model
 import argparse
 
@@ -21,12 +21,13 @@ def main():
 
     mobile = keras.applications.mobilenet.MobileNet(weights='imagenet')
 
-    print(mobile.summary())
+    # print(mobile.summary())
 
     x = mobile.layers[FLAGS.layer_to_append].output
     reshaped = Reshape(target_shape=[1024], name='tiago_reshape')(x)
     intermediate = Dense(512, activation='relu')(reshaped)
-    pred = Dense(16, activation='softmax')(intermediate)
+    drop = Dropout(0.5)(intermediate)
+    pred = Dense(16, activation='softmax')(drop)
     model = Model(inputs=mobile.input, outputs=pred)
 
     print(model.summary())
