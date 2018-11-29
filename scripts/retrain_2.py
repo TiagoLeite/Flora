@@ -25,7 +25,7 @@ def main():
 
     x = mobile.layers[FLAGS.layer_to_append].output
     reshaped = Reshape(target_shape=[1024], name='tiago_reshape')(x)
-    intermediate = Dense(512)(reshaped)
+    intermediate = Dense(512, activation='relu')(reshaped)
     pred = Dense(16, activation='softmax')(intermediate)
     model = Model(inputs=mobile.input, outputs=pred)
 
