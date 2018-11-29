@@ -40,7 +40,7 @@ def main():
     model.compile(optimizer=keras.optimizers.Adam(), loss='categorical_crossentropy',
                   metrics=['accuracy'])
     model.fit_generator(train_batches, steps_per_epoch=46, validation_data=valid_batches,
-                        validation_steps=537//100, epochs=500, verbose=2)
+                        validation_steps=537//100, epochs=100, verbose=2)
 
 
 if __name__ == '__main__':
