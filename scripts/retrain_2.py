@@ -25,7 +25,7 @@ print(model.summary())
 
 print('Layers:', len(model.layers))
 
-for layer in model.layers[:-5]:
+for layer in model.layers[:-1]:
     layer.trainable = False
 
 model.compile(optimizer=keras.optimizers.Adam(lr=10e-4), loss='categorical_crossentropy',
