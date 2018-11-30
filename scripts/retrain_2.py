@@ -75,7 +75,7 @@ def main():
     model.compile(optimizer=keras.optimizers.Adam(), loss='categorical_crossentropy',
                   metrics=['accuracy'])
     model.fit_generator(train_batches, steps_per_epoch=46, validation_data=valid_batches,
-                        validation_steps=537 // 75, epochs=100, verbose=2)
+                        validation_steps=537 // 100, epochs=75, verbose=2)
     model.save('saved_model.h5')
     frozen_graph = freeze_session(K.get_session(),
                                   output_names=[out.op.name for out in model.outputs])
