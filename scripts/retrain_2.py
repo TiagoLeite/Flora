@@ -12,8 +12,8 @@ train_path = '../65_flowers'
 
 FLAGS = None
 CLASSES_NUM = 65
-EPOCHS = 100
-BATCH_SIZE = 4
+EPOCHS = FLAGS.EPOCHS
+BATCH_SIZE = FLAGS.BATCH_SIZE
 
 
 def freeze_session(session, keep_var_names=None, output_names=None, clear_devices=True):
@@ -102,6 +102,16 @@ if __name__ == '__main__':
         '--layer_to_train',
         type=int,
         default=0,
+    )
+    parser.add_argument(
+        '--BATCH_SIZE',
+        type=int,
+        default=100,
+    )
+    parser.add_argument(
+        '--EPOCHS',
+        type=int,
+        default=100,
     )
     FLAGS, unparsed = parser.parse_known_args()
     main()

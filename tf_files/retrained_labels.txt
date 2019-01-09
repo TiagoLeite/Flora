@@ -1,24 +1,65 @@
-begonia semperflorens flower
-hippeastrum hybridum flower
-impatiens hawkeri flower
+acalypha reptans
+achillea millefolium
+adenium obesum
+aeschynanthus lobianus
 agapanthus africanus
+alcantarea imperialis
 alstroemeria x hibrida
 anthurium andraeanum
 antirrhinum majus
-bellis sp
-bougainvillea sp
+argyranthemum frutescens
+begonia semperflorens
+bellis perennis
+bougainvillea spp
+calendula officinalis
+calibrachoa sellowiana
+calla sp
+camellia japonica
+celosia cristata
+clivia miniata
+cyclamen persicum
+cynoglossum amabile
+dahlia pinnata
+dianthus caryophyllus
+dietes bicolor
+echeveria sp
+euphorbia ingens
+euphorbia milii
+euphorbia pulcherrima
+fuchsia sp
+gardenia jasminoides
+gerbera jamesonii
+gomphrena globosa
 helianthus annuus
-hibiscus sp
-ixora coccinea
+hemerocallis flava
+hibiscus rosa sinensis
+hippeastrum hybridum
+hyacinthus orientalis
+hydrangea macrophylla
+impatiens hawkeri
+impatiens walleriana
+iris germanica
+ixora macrothyrsa
 lantana camara
+lavandula dentata
+leucanthemum vulgare
+liatris spicata
+lilium pumilum
 lobularia maritima
-narcissus sp
+magnolia liliflora
+narcissus spp
+nelumbo nucifera
 nerium oleander
-none
-plumbago auriculata
+pelargonium peltatum
+phalaenopsis alba
+portulaca grandiflora
 rhododendron simsii
-rosa sp
+rosa x hybrida
+saintpaulia ionantha
+schlumbergera sp
 strelitzia reginae
-taraxacum officinale
 thunbergia alata
+thunbergia mysorensis
 viola x wittrockiana
+zantedeschia aetiopica
+plumbago auriculata
