@@ -12,8 +12,6 @@ train_path = '../65_flowers'
 
 FLAGS = None
 CLASSES_NUM = 65
-EPOCHS = FLAGS.EPOCHS
-BATCH_SIZE = FLAGS.BATCH_SIZE
 
 
 def freeze_session(session, keep_var_names=None, output_names=None, clear_devices=True):
@@ -32,6 +30,10 @@ def freeze_session(session, keep_var_names=None, output_names=None, clear_device
 
 
 def main():
+
+    EPOCHS = FLAGS.EPOCHS
+    BATCH_SIZE = FLAGS.BATCH_SIZE
+
     train_datagen = ImageDataGenerator(preprocessing_function=keras.applications.mobilenet.preprocess_input,
                                        rescale=1.0 / 255.0,
                                        rotation_range=180,
