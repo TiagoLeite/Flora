@@ -1,0 +1,102 @@
+[
+  {
+    "rank":"especie","grupo":"Angiospermas","classe":"null","divisao":"null","ordem":"null","familia":"Ericaceae",
+    "subfamilia":"null","tribo":"null","genero":"Rhododendron","especie":"null","subespecie":"null","variedade":"null",
+    "forma":"null","origem":"Ásia, China","ocorre_no_brasil":"Sim",
+    "formas_de_vida":"Arbustos, Cercas Vivas, Flores Perenes","substratos":"null",
+    "distr_regional":"null","dom_fitogeográfico":"null","tipo_vegetacao":"null","nomes_vernaculares":"null",
+    "latinName": "rhododendron simsii", "popularNames": ["Azaléia"],
+    "isPoisonous": false
+  },
+  {
+    "rank":"genero","grupo":"Angiospermas","classe":"null","divisao":"null","ordem":"null","familia":"Plumbaginaceae","subfamilia":"null","tribo":"null","genero":"Plumbago","especie":"null","subespecie":"null","variedade":"null","forma":"null","origem":"Nativa","ocorre_no_brasil":"Sim","formas_de_vida":"null","substratos":"null","distr_regional":"null","dom_fitogeográfico":"null","tipo_vegetacao":"null","nomes_vernaculares":"null",
+    "latinName": "plumbago auriculata", "popularNames": ["Bela Emília", "Jasmim Azul"],
+    "isPoisonous": false
+  },
+  {
+    "rank":"Gênero","grupo":"Angiospermas","classe":"null","divisao":"null","ordem":"null","familia":"Nyctaginaceae","subfamilia":"null","tribo":"null","genero":"Bougainvillea","especie":"null","subespecie":"null","variedade":"null","forma":"null","origem":"Nativa","ocorre_no_brasil":"Sim","formas_de_vida":"null","substratos":"null","distr_regional":"null","dom_fitogeográfico":"null","tipo_vegetacao":"null","nomes_vernaculares":"null",
+    "latinName": "bougainvillea sp.", "popularNames": ["Primavera"],
+    "isPoisonous": false
+  },
+  {
+    "genero":"Taraxacum","familia":"Asteraceae","grupo":"Angiospermas",
+    "latinName":"taraxacum officinale", "popularNames": ["Dente de leão", "Esperança", "Taraxaco"],
+    "isPoisonous": false
+  },
+  {
+    "rank":"Gênero","grupo":"Angiospermas","classe":"null","divisao":"null","ordem":"null","familia":
+    "Malvaceae","subfamilia":"null","tribo":"null","genero":"Hibiscus","especie":"null","subespecie":"null",
+    "variedade":"null","forma":"null","origem":"Nativa","ocorre_no_brasil":"Sim","formas_de_vida":"null",
+    "substratos":"null","distr_regional":"null","dom_fitogeográfico":"null","tipo_vegetacao":"null",
+    "nomes_vernaculares":"null",
+    "latinName": "hibiscus rosa sinensis", "popularNames": ["Hibisco", "Mimo-chinês"],
+    "isPoisonous": false
+  },
+  {
+    "rank":"especie","grupo":"Angiospermas","classe":"null","divisao":"null","ordem":"null","familia":"Apocynaceae","subfamilia":"null","tribo":"null",
+    "genero":"Nerium","especie":"oleander","subespecie":"null","variedade":"null","forma":"null","origem":"Cultivada","ocorre_no_brasil":"Sim",
+    "formas_de_vida":"Árvore","substratos":"Terrícola","distr_regional":"Norte, Nordeste, Centro-Oeste, Sudeste, Sul","dom_fitogeográfico":"null",
+    "tipo_vegetacao":"Área Antrópica","nomes_vernaculares":"null",
+    "latinName": "nerium oleander", "popularNames": ["Espirradeira", "Oleandro", "Flor de São José"],
+    "isPoisonous": true
+  },
+  {
+    "ordem": "Asterales","grupo":"Angiospermas",
+    "familia": "Asteraceae", "genero":"Helianthus",
+    "latinName": "helianthus annuus", "popularNames": ["Girassol"],
+    "isPoisonous": false
+  },
+  {
+    "familia":"Asteraceae",
+    "genero":"Bellis",
+    "latinName": "bellis sp.", "popularNames": ["Margarida"],
+    "isPoisonous": false
+  },
+  {
+    "rank":"especie","grupo":"Angiospermas","classe":"null","divisao":"null","ordem":"null","familia":"Verbenaceae","subfamilia":"null","tribo":"null","genero":"Lantana","especie":"camara","subespecie":"null","variedade":"null","forma":"null","origem":"Nativa","ocorre_no_brasil":"Sim","formas_de_vida":"Arbusto; Árvore; Subarbusto","substratos":"Terrícola","distr_regional":"Norte, Nordeste, Centro-Oeste, Sudeste, Sul","dom_fitogeográfico":"Amazônia, Caatinga, Cerrado, Mata Atlântica","tipo_vegetacao":"Área Antrópica, Caatinga (stricto sensu), Campo de Altitude, Campo Limpo, Campo Rupestre, Carrasco, Cerrado (lato sensu), Floresta Ciliar ou Galeria, Floresta de Terra Firme, Floresta de Várzea, Floresta Estacional Decidual, Floresta Estacional Semidecidual, Floresta Ombrófila (= Floresta Pluvial), Floresta Ombrófila Mista, Restinga","nomes_vernaculares":"camara",
+    "latinName": "lantana camara",
+    "popularNames": ["Lantana", "Camará", "Camarazinho"],
+    "isPoisonous": true
+  },
+  {
+    "rank":"Gênero","grupo":"Angiospermas","classe":"null","divisao":"null","ordem":"null","familia":"Rosaceae","subfamilia":"null","tribo":"null","genero":"Rosa","especie":"null","subespecie":"null","variedade":"null","forma":"null","origem":"Cultivada","ocorre_no_brasil":"Sim","formas_de_vida":"null","substratos":"null","distr_regional":"null","dom_fitogeográfico":"null","tipo_vegetacao":"null","nomes_vernaculares":"null",
+    "latinName": "rosa sp.", "popularNames": ["Rosa"],
+    "isPoisonous": false
+  },
+  {
+    "latinName": "none", "popularNames": ["None"],
+    "isPoisonous": false
+  },
+  {
+    "rank":"especie","grupo":"Angiospermas","classe":"null","divisao":"null","ordem":"null","familia":"Acanthaceae","subfamilia":"null","tribo":"null","genero":"Thunbergia","especie":"alata","subespecie":"null","variedade":"null","forma":"null","origem":"Naturalizada","ocorre_no_brasil":"Sim","formas_de_vida":"Liana\/volúvel\/trepadeira","substratos":"Terrícola","distr_regional":"Norte, Nordeste, Centro-Oeste, Sudeste, Sul","dom_fitogeográfico":"Amazônia, Caatinga, Mata Atlântica","tipo_vegetacao":"Área Antrópica","nomes_vernaculares":"null",
+    "latinName": "thunbergia alata", "popularNames": ["Tumbérgia"],
+    "isPoisonous": false
+  },
+  {
+    "familia":"Strelitziaceae",
+    "genero":"Strelitzia",
+    "origem": "África, África do Sul",
+    "latinName": "strelitzia reginae", "popularNames": ["Estrelítzia", "Pássaro do Paraíso"],
+    "isPoisonous": false
+  },
+  {
+    "ordem":"Asparagales",
+    "familia":"Amaryllidaceae",
+    "genero":"Narcissus",
+    "latinName": "narcissus sp.", "popularNames": ["Narciso"],
+    "isPoisonous": true
+  },
+  {
+    "familia":"Violaceae",
+    "genero":"Viola",
+    "latinName": "Viola x wittrockiana", "popularNames": ["Amor Perfeito"],
+    "isPoisonous": false
+  },
+  {
+    "rank":"especie","grupo":"Angiospermas","classe":"null","divisao":"null","ordem":"null","familia":"Rubiaceae","subfamilia":"null","tribo":"null","genero":"Ixora","especie":"coccinea","subespecie":"null","variedade":"null","forma":"null","origem":"Cultivada","ocorre_no_brasil":"Sim","formas_de_vida":"Arbusto","substratos":"Terrícola","distr_regional":"Norte, Nordeste, Centro-Oeste, Sudeste, Sul","dom_fitogeográfico":"Amazônia, Caatinga, Cerrado, Mata Atlântica, Pampa","tipo_vegetacao":"Área Antrópica","nomes_vernaculares":"Ixora",
+    "latinName": "ixora coccinea", "popularNames": ["Ixora"],
+    "isPoisonous": false
+  }
+]
+
+
