@@ -47,11 +47,11 @@ def main():
 
     train_gen = train_datagen.flow_from_directory(train_path,
                                                   target_size=(224, 224),
-                                                  batch_size=100,
+                                                  batch_size=BATCH_SIZE,
                                                   subset='training')
     val_gen = train_datagen.flow_from_directory(train_path,
                                                 target_size=(224, 224),
-                                                batch_size=100,
+                                                batch_size=BATCH_SIZE,
                                                 subset='validation')
 
 
@@ -108,12 +108,12 @@ if __name__ == '__main__':
     parser.add_argument(
         '--BATCH_SIZE',
         type=int,
-        default=100,
+        default=64,
     )
     parser.add_argument(
         '--EPOCHS',
         type=int,
-        default=100,
+        default=64,
     )
     FLAGS, unparsed = parser.parse_known_args()
     main()
