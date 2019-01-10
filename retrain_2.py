@@ -6,6 +6,7 @@ from keras.models import Model
 import argparse
 import tensorflow as tf
 from keras import backend as K
+from metrics import Metrics
 
 train_path = '65_flowers'
 # test_path = '../data/test'
@@ -94,12 +95,17 @@ def main():
     model.compile(optimizer=keras.optimizers.Adam(lr=0.0001, decay=0.1), loss='categorical_crossentropy',
                   metrics=['accuracy'])
 
+    #label_map = train_gen.class_indices
+    #print(label_map)
+
+    metrics = Metrics()
+
     model.fit_generator(train_gen,
                         steps_per_epoch=train_gen.samples // BATCH_SIZE,
                         validation_data=val_gen,
                         validation_steps=val_gen.samples // BATCH_SIZE,
                         epochs=EPOCHS,
-                        verbose=2)
+                        verbose=2, callbacks=[metrics])
 
     model.save('saved_models/saved_model_3.h5')
 
