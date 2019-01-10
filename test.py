@@ -1,24 +1,27 @@
 import tensorflow as tf
-from numpy import random
+from keras import Model
+from keras.models import load_model
+from PIL import Image
+import numpy as np
+from matplotlib import pyplot as plt
 
-writer_1 = tf.summary.FileWriter("./logs/plot_1")
-writer_2 = tf.summary.FileWriter("./logs/plot_2")
+image = Image.open('4.jpg')
+image = image.resize((224, 224), Image.ANTIALIAS)
+plt.imshow(image)
+plt.show()
+image_arr = (np.array(image)[None, ...])/255.0
 
-log_var = tf.Variable(0.0)
-tf.summary.scalar("loss", log_var)
+print(image_arr)
 
-write_op = tf.summary.merge_all()
+model = load_model('saved_models/saved_model_2.h5')
 
-session = tf.InteractiveSession()
-session.run(tf.global_variables_initializer())
+print(np.shape(image_arr))
 
-for i in range(100):
-    # for writer 1
-    summary = session.run(write_op, {log_var: random.rand()})
-    writer_1.add_summary(summary, i)
-    writer_1.flush()
+# image_arr = image_arr.reshape([224, 224, 3])
 
-    # for writer 2
-    summary = session.run(write_op, {log_var: random.rand()})
-    writer_2.add_summary(summary, i)
-    writer_2.flush()
+pred = model.predict(image_arr)
+
+print(pred[0])
+print(np.argmax(pred[0]))
+
+

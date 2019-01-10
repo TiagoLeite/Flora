@@ -34,6 +34,7 @@ def freeze_session(session, keep_var_names=None, output_names=None, clear_device
 
 
 model = load_model('saved_models/saved_model_2.h5')
-frozen_graph = freeze_session(K.get_session(),
-                              output_names=[out.op.name for out in model.outputs])
-tf.train.write_graph(frozen_graph, "saved_models", "65_classes.pb", as_text=False)
+print(model.outputs)
+#frozen_graph = freeze_session(K.get_session(),
+#                              output_names=[out.op.name for out in model.outputs])
+# tf.train.write_graph(frozen_graph, "saved_models", "65_classes.pb", as_text=False)
