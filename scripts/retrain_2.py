@@ -1,12 +1,13 @@
 import keras
 from keras.preprocessing.image import ImageDataGenerator
+from keras.models import load_model
 from keras.layers import Dense, Reshape, Dropout
 from keras.models import Model
 import argparse
 import tensorflow as tf
 from keras import backend as K
 
-train_path = '../65_flowers'
+train_path = '65_flowers'
 # test_path = '../data/test'
 # valid_path = '../data/valid'
 
@@ -29,10 +30,27 @@ def freeze_session(session, keep_var_names=None, output_names=None, clear_device
         return frozen_graph
 
 
-def main():
+def load_trained_model(h5_file_path):
+    model = load_model(h5_file_path)
+    return model
 
+
+def get_new_model():
+    mobile = keras.applications.mobilenet.MobileNet(weights='imagenet')
+    # print(mobile.summary())
+    x = mobile.layers[FLAGS.layer_to_append].output
+    reshaped = Reshape(target_shape=[1024], name='tiago_reshape')(x)
+    # intermediate = Dense(512, activation='relu')(reshaped)
+    # drop = Dropout(0.5)(intermediate)
+    pred = Dense(CLASSES_NUM, activation='softmax')(reshaped)
+    model = Model(inputs=mobile.input, outputs=pred)
+    return model
+
+
+def main():
     EPOCHS = FLAGS.EPOCHS
     BATCH_SIZE = FLAGS.BATCH_SIZE
+    SAVED_MODEL_PATH = FLAGS.saved_model_path
 
     train_datagen = ImageDataGenerator(preprocessing_function=keras.applications.mobilenet.preprocess_input,
                                        rescale=1.0 / 255.0,
@@ -54,21 +72,16 @@ def main():
                                                 batch_size=BATCH_SIZE,
                                                 subset='validation')
 
-
     # test_batches = ImageDataGenerator(preprocessing_function=keras.applications.mobilenet.preprocess_input). \
     #    flow_from_directory(test_path, target_size=(224, 224), batch_size=100, shuffle=False)
 
     # valid_batches = ImageDataGenerator(preprocessing_function=keras.applications.mobilenet.preprocess_input). \
     #    flow_from_directory(valid_path, target_size=(224, 224), batch_size=100)
 
-    mobile = keras.applications.mobilenet.MobileNet(weights='imagenet')
-    # print(mobile.summary())
-    x = mobile.layers[FLAGS.layer_to_append].output
-    reshaped = Reshape(target_shape=[1024], name='tiago_reshape')(x)
-    #intermediate = Dense(512, activation='relu')(reshaped)
-    #drop = Dropout(0.5)(intermediate)
-    pred = Dense(CLASSES_NUM, activation='softmax')(reshaped)
-    model = Model(inputs=mobile.input, outputs=pred)
+    if SAVED_MODEL_PATH == 'null':
+        model = get_new_model()
+    else:
+        model = load_trained_model('saved_model.h5')
 
     print(model.summary())
 
@@ -81,9 +94,9 @@ def main():
                   metrics=['accuracy'])
 
     model.fit_generator(train_gen,
-                        steps_per_epoch=train_gen.samples//BATCH_SIZE,
+                        steps_per_epoch=train_gen.samples // BATCH_SIZE,
                         validation_data=val_gen,
-                        validation_steps=val_gen.samples//BATCH_SIZE,
+                        validation_steps=val_gen.samples // BATCH_SIZE,
                         epochs=EPOCHS,
                         verbose=2)
 
@@ -114,6 +127,11 @@ if __name__ == '__main__':
         '--EPOCHS',
         type=int,
         default=64,
+    )
+    parser.add_argument(
+        '--saved_model_path',
+        type=str,
+        default='null',
     )
     FLAGS, unparsed = parser.parse_known_args()
     main()
