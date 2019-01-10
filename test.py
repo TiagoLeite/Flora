@@ -5,7 +5,7 @@ from PIL import Image
 import numpy as np
 from matplotlib import pyplot as plt
 
-image = Image.open('4.jpg')
+image = Image.open('5.jpg')
 image = image.resize((224, 224), Image.ANTIALIAS)
 plt.imshow(image)
 plt.show()
