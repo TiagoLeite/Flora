@@ -117,7 +117,7 @@ def main():
     #for layer in model.layers[:FLAGS.layer_to_train]:
     #    layer.trainable = False
 
-    model.compile(optimizer=keras.optimizers.Adam(lr=0.001), loss='categorical_crossentropy',
+    model.compile(optimizer=keras.optimizers.Adam(lr=0.001, decay=0.01), loss='categorical_crossentropy',
                   metrics=['accuracy', recall_score, precision_score])
 
     label_map = train_gen.class_indices
