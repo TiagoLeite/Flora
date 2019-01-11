@@ -76,9 +76,10 @@ def main():
     EPOCHS = FLAGS.EPOCHS
     BATCH_SIZE = FLAGS.BATCH_SIZE
     SAVED_MODEL_PATH = FLAGS.saved_model_path
+    # preprocessing_function = keras.applications.mobilenet.preprocess_input
 
-    train_datagen = ImageDataGenerator(preprocessing_function=keras.applications.mobilenet.preprocess_input,
-                                       rescale=1.0 / 255.0,
+    train_datagen = ImageDataGenerator(preprocessing_function=None,
+                                       rescale=1.0/255.0,
                                        rotation_range=180,
                                        width_shift_range=0.2,
                                        height_shift_range=0.2,
@@ -116,7 +117,7 @@ def main():
     #for layer in model.layers[:FLAGS.layer_to_train]:
     #    layer.trainable = False
 
-    model.compile(optimizer=keras.optimizers.Adam(lr=0.0001, decay=0.1), loss='categorical_crossentropy',
+    model.compile(optimizer=keras.optimizers.Adam(lr=0.001), loss='categorical_crossentropy',
                   metrics=['accuracy', recall_score, precision_score])
 
     label_map = train_gen.class_indices
@@ -129,11 +130,10 @@ def main():
                         epochs=EPOCHS,
                         verbose=2)
 
-    model.save('saved_models/saved_model_3.h5')
-
-    frozen_graph = freeze_session(K.get_session(),
-                                  output_names=[out.op.name for out in model.outputs])
-    tf.train.write_graph(frozen_graph, logdir='tf_files', name="saved_model.pb", as_text=False)
+    model.save('saved_models/new_saved_model.h5')
+    #frozen_graph = freeze_session(K.get_session(),
+    #                              output_names=[out.op.name for out in model.outputs])
+    # tf.train.write_graph(frozen_graph, logdir='saved_models', name="saved_model.pb", as_text=False)
 
 
 if __name__ == '__main__':
@@ -156,7 +156,7 @@ if __name__ == '__main__':
     parser.add_argument(
         '--EPOCHS',
         type=int,
-        default=64,
+        default=100,
     )
     parser.add_argument(
         '--saved_model_path',

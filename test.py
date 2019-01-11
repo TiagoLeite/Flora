@@ -6,10 +6,10 @@ import numpy as np
 from matplotlib import pyplot as plt
 
 image = Image.open('5.jpg')
-image = image.resize((224, 224), Image.ANTIALIAS)
+image = image.resize((224, 224))
 plt.imshow(image)
 plt.show()
-image_arr = (np.array(image)[None, ...])/255.0
+image_arr = (np.array(image)[None, ...])/(255.0**2)
 
 print(image_arr)
 
