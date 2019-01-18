@@ -7,13 +7,16 @@ import argparse
 import tensorflow as tf
 from keras import backend as K
 from metrics import Metrics
+import pandas as pd
+import numpy as np
 
-train_path = '65_flowers'
+
+train_path = 'dataset/66_classes'
 # test_path = '../data/test'
 # valid_path = '../data/valid'
 
 FLAGS = None
-CLASSES_NUM = 65
+CLASSES_NUM = 66
 
 
 def freeze_session(session, keep_var_names=None, output_names=None, clear_devices=True):
@@ -55,9 +58,19 @@ def recall_score(y_true, y_pred):
     return recall
 
 
-def load_trained_model(h5_file_path):
-    model = load_model(h5_file_path)
-    return model
+def load_trained_model(h5_file_path, using_softmax):
+    saved_model = load_model(h5_file_path)
+    if not using_softmax:
+        x = saved_model.layers[FLAGS.layer_to_append].output
+        reshaped = Reshape(target_shape=[1024], name='tiago_reshape')(x)
+        # intermediate = Dense(512, activation='relu')(reshaped)
+        # drop = Dropout(0.5)(intermediate)
+        pred = Dense(CLASSES_NUM, activation='softmax')(reshaped)
+        model = Model(inputs=saved_model.input, outputs=pred)
+        return model
+
+    else:
+        return saved_model
 
 
 def get_new_model():
@@ -108,20 +121,29 @@ def main():
         model = get_new_model()
     else:
         print('Restoring model from ', SAVED_MODEL_PATH)
-        model = load_trained_model(SAVED_MODEL_PATH)
+        model = load_trained_model(SAVED_MODEL_PATH, False)
 
     print(model.summary())
 
     print('Layers:', len(model.layers))
 
-    #for layer in model.layers[:FLAGS.layer_to_train]:
-    #    layer.trainable = False
+    for layer in model.layers[:FLAGS.layer_to_train]:
+        layer.trainable = False
 
     model.compile(optimizer=keras.optimizers.Adam(lr=0.001, decay=0.01), loss='categorical_crossentropy',
                   metrics=['accuracy', recall_score, precision_score])
 
     label_map = train_gen.class_indices
-    print(label_map)
+    # print(label_map)
+    keys = list(label_map.keys())
+    values = [label_map[key] for key in keys]
+    print(keys)
+    print(values)
+    print(np.shape(keys), np.shape(values))
+    dataframe = pd.DataFrame(columns=['name', 'index'], data=np.transpose([keys, values]))
+    print(dataframe.head())
+    print(dataframe.tail())
+    dataframe.to_csv('csv/labels_map.csv', index=False)
 
     model.fit_generator(train_gen,
                         steps_per_epoch=train_gen.samples // BATCH_SIZE,
@@ -130,7 +152,7 @@ def main():
                         epochs=EPOCHS,
                         verbose=2)
 
-    model.save('saved_models/new_saved_model.h5')
+    # model.save('saved_models/new_saved_model.h5')
     #frozen_graph = freeze_session(K.get_session(),
     #                              output_names=[out.op.name for out in model.outputs])
     # tf.train.write_graph(frozen_graph, logdir='saved_models', name="saved_model.pb", as_text=False)

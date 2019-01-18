@@ -97,6 +97,8 @@ build/
 develop-eggs/
 dist/
 downloads/
+zip/
+tf_files/
 eggs/
 .eggs/
 lib/

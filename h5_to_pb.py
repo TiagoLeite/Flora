@@ -3,6 +3,30 @@ from keras import backend as K
 from keras.models import load_model
 
 
+def recall_score(y_true, y_pred):
+    """Recall metric.
+    Only computes a batch-wise average of recall.
+    Computes the recall, a metric for multi-label classification of
+    how many relevant items are selected.
+    """
+    true_positives = K.sum(K.round(K.clip(y_true * y_pred, 0, 1)))
+    possible_positives = K.sum(K.round(K.clip(y_true, 0, 1)))
+    recall = true_positives / (possible_positives + K.epsilon())
+    return recall
+
+
+def precision_score(y_true, y_pred):
+    """Precision metric.
+    Only computes a batch-wise average of precision.
+    Computes the precision, a metric for multi-label classification of
+    how many selected items are relevant.
+    """
+    true_positives = K.sum(K.round(K.clip(y_true * y_pred, 0, 1)))
+    predicted_positives = K.sum(K.round(K.clip(y_pred, 0, 1)))
+    precision = true_positives / (predicted_positives + K.epsilon())
+    return precision
+
+
 def freeze_session(session, keep_var_names=None, output_names=None, clear_devices=True):
     """
     Freezes the state of a session into a pruned computation graph.
@@ -33,8 +57,15 @@ def freeze_session(session, keep_var_names=None, output_names=None, clear_device
         return frozen_graph
 
 
-model = load_model('saved_models/saved_model_2.h5')
+model = load_model('saved_models/new_saved_model.h5',
+                   custom_objects={'recall_score': recall_score,
+                                   'precision_score': precision_score})
+print(model.inputs)
 print(model.outputs)
+
+
+
 #frozen_graph = freeze_session(K.get_session(),
 #                              output_names=[out.op.name for out in model.outputs])
-# tf.train.write_graph(frozen_graph, "saved_models", "65_classes.pb", as_text=False)
+
+# tf.train.write_graph(frozen_graph, "saved_models", "65_classes_new.pb", as_text=False)
