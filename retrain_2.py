@@ -93,14 +93,14 @@ def main():
 
     train_datagen = ImageDataGenerator(preprocessing_function=None,
                                        rescale=1.0/255.0,
-                                       rotation_range=180,
+                                       rotation_range=90,
                                        width_shift_range=0.2,
                                        height_shift_range=0.2,
                                        shear_range=0.1,
                                        horizontal_flip=True,
-                                       zoom_range=[0.9, 1.25],
-                                       brightness_range=[0.5, 1.5],
-                                       validation_split=0.2)
+                                       zoom_range=[0.9, 1.1],
+                                       brightness_range=[0.6, 1.4],
+                                       validation_split=0.15)
 
     train_gen = train_datagen.flow_from_directory(train_path,
                                                   target_size=(224, 224),
