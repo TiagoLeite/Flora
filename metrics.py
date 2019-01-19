@@ -21,7 +21,7 @@ class Metrics(Callback):
         self.val_f1s.append(_val_f1)
         self.val_recalls.append(_val_recall)
         self.val_precisions.append(_val_precision)
-        print("accuracy: % f — f-score: % f — precision: % f — recall % f"
+        print("accuracy: % f \n— f-score: % f \n— precision: % f \n— recall % f"
               % (_val_accuacies, _val_f1, _val_precision, _val_recall))
         return
 
