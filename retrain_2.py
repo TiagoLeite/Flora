@@ -152,10 +152,10 @@ def main():
                         epochs=EPOCHS,
                         verbose=2)
 
-    # model.save('saved_models/new_saved_model.h5')
-    #frozen_graph = freeze_session(K.get_session(),
-    #                              output_names=[out.op.name for out in model.outputs])
-    # tf.train.write_graph(frozen_graph, logdir='saved_models', name="saved_model.pb", as_text=False)
+    model.save('saved_models/saved_model_80.h5')
+    frozen_graph = freeze_session(K.get_session(),
+                                  output_names=[out.op.name for out in model.outputs])
+    tf.train.write_graph(frozen_graph, logdir='saved_models', name="saved_model_80.pb", as_text=False)
 
 
 if __name__ == '__main__':
