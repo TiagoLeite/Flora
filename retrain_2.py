@@ -11,12 +11,12 @@ import pandas as pd
 import numpy as np
 
 
-train_path = 'dataset/80_classes'
+train_path = 'dataset/77_classes'
 # test_path = '../data/test'
 # valid_path = '../data/valid'
 
 FLAGS = None
-CLASSES_NUM = 80
+CLASSES_NUM = 77
 
 
 def freeze_session(session, keep_var_names=None, output_names=None, clear_devices=True):
@@ -93,12 +93,12 @@ def main():
 
     train_datagen = ImageDataGenerator(preprocessing_function=None,
                                        rescale=1.0/255.0,
-                                       rotation_range=90,
+                                       rotation_range=180,
                                        width_shift_range=0.2,
                                        height_shift_range=0.2,
                                        shear_range=0.1,
                                        horizontal_flip=True,
-                                       zoom_range=[0.9, 1.1],
+                                       zoom_range=[0.85, 1.11],
                                        brightness_range=[0.6, 1.4],
                                        validation_split=0.15)
 
@@ -152,10 +152,10 @@ def main():
                         epochs=EPOCHS,
                         verbose=2)
 
-    model.save('saved_models/saved_model_80.h5')
+    model.save('saved_models/saved_model_77.h5')
     frozen_graph = freeze_session(K.get_session(),
                                   output_names=[out.op.name for out in model.outputs])
-    tf.train.write_graph(frozen_graph, logdir='saved_models', name="saved_model_80.pb", as_text=False)
+    tf.train.write_graph(frozen_graph, logdir='saved_models', name="saved_model_77.pb", as_text=False)
 
 
 if __name__ == '__main__':
