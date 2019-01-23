@@ -11,12 +11,12 @@ import pandas as pd
 import numpy as np
 
 
-train_path = 'dataset/77_classes'
+train_path = 'dataset/78_classes'
 # test_path = '../data/test'
 # valid_path = '../data/valid'
 
 FLAGS = None
-CLASSES_NUM = 77
+CLASSES_NUM = 78
 
 
 def freeze_session(session, keep_var_names=None, output_names=None, clear_devices=True):
@@ -130,7 +130,8 @@ def main():
     #for layer in model.layers[:FLAGS.layer_to_train]:
     #    layer.trainable = False
 
-    model.compile(optimizer=keras.optimizers.Adam(), loss='categorical_crossentropy',
+    model.compile(optimizer=keras.optimizers.Adam(lr=0.0005, decay=0.01),
+                  loss='categorical_crossentropy',
                   metrics=['accuracy', recall_score, precision_score])
 
     label_map = train_gen.class_indices
@@ -152,10 +153,10 @@ def main():
                         epochs=EPOCHS,
                         verbose=2)
 
-    model.save('saved_models/saved_model_77.h5')
-    frozen_graph = freeze_session(K.get_session(),
-                                  output_names=[out.op.name for out in model.outputs])
-    tf.train.write_graph(frozen_graph, logdir='saved_models', name="saved_model_77.pb", as_text=False)
+    model.save('saved_models/saved_model_78.h5')
+    #frozen_graph = freeze_session(K.get_session(),
+    #                              output_names=[out.op.name for out in model.outputs])
+    #tf.train.write_graph(frozen_graph, logdir='saved_models', name="saved_model_78.pb", as_text=False)
 
 
 if __name__ == '__main__':
