@@ -116,7 +116,6 @@ from tensorflow.python.util import compat
 import sklearn.metrics as metrics
 from keras.utils.np_utils import to_categorical
 
-
 FLAGS = None
 
 # These are all parameters that are tied to the particular model architecture
@@ -778,7 +777,7 @@ def add_final_training_ops(class_count, final_tensor_name, bottleneck_tensor,
             layer_weights = tf.Variable(initial_value, name='final_weights')
             variable_summaries(layer_weights)
         with tf.name_scope('biases'):
-            layer_biases = tf.Variable(tf.ones([class_count])/100, name='final_biases')
+            layer_biases = tf.Variable(tf.ones([class_count]) / 100, name='final_biases')
             variable_summaries(layer_biases)
         with tf.name_scope('Wx_plus_b'):
             logits = tf.matmul(bottleneck_input, layer_weights) + layer_biases
@@ -1345,7 +1344,6 @@ if __name__ == '__main__':
     FLAGS, unparsed = parser.parse_known_args()
     tf.app.run(main=main, argv=[sys.argv[0]] + unparsed)
 
-
 '''
     precision = dict()
     recall = dict()
@@ -1363,7 +1361,7 @@ if __name__ == '__main__':
 
     print('Average precision score, micro-averaged over all classes: {0:0.2f}'
           .format(average_precision["micro"]))
-          
+
     precision = dict()
     recall = dict()
     average_precision = dict()
