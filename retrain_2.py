@@ -59,7 +59,7 @@ def recall_score(y_true, y_pred):
 
 
 def load_trained_model(h5_file_path, using_softmax):
-    saved_model = load_model(h5_file_path)
+    saved_model = load_model(h5_file_path, custom_objects=[recall_score, precision_score()])
     if not using_softmax:
         x = saved_model.layers[FLAGS.layer_to_append].output
         reshaped = Reshape(target_shape=[1024], name='tiago_reshape')(x)
