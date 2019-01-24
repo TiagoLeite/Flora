@@ -121,7 +121,7 @@ def main():
         model = get_new_model()
     else:
         print('Restoring model from ', SAVED_MODEL_PATH)
-        model = load_trained_model(SAVED_MODEL_PATH, False)
+        model = load_trained_model(SAVED_MODEL_PATH, True)
 
     print(model.summary())
 
