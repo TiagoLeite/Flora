@@ -10,7 +10,6 @@ from metrics import Metrics
 import pandas as pd
 import numpy as np
 
-
 train_path = 'dataset/78_classes'
 # test_path = '../data/test'
 # valid_path = '../data/valid'
@@ -59,7 +58,8 @@ def recall_score(y_true, y_pred):
 
 
 def load_trained_model(h5_file_path, using_softmax):
-    saved_model = load_model(h5_file_path, custom_objects=[recall_score, precision_score()])
+    saved_model = load_model(h5_file_path, custom_objects={'recall_score': recall_score,
+                                                           'precision_score': precision_score})
     if not using_softmax:
         x = saved_model.layers[FLAGS.layer_to_append].output
         reshaped = Reshape(target_shape=[1024], name='tiago_reshape')(x)
@@ -92,7 +92,7 @@ def main():
     # preprocessing_function = keras.applications.mobilenet.preprocess_input
 
     train_datagen = ImageDataGenerator(preprocessing_function=None,
-                                       rescale=1.0/255.0,
+                                       rescale=1.0 / 255.0,
                                        rotation_range=180,
                                        width_shift_range=0.2,
                                        height_shift_range=0.2,
@@ -127,10 +127,10 @@ def main():
 
     print('Layers:', len(model.layers))
 
-    #for layer in model.layers[:FLAGS.layer_to_train]:
+    # for layer in model.layers[:FLAGS.layer_to_train]:
     #    layer.trainable = False
 
-    model.compile(optimizer=keras.optimizers.Adam(lr=0.0005, decay=0.01),
+    model.compile(optimizer=keras.optimizers.Adam(lr=0.0001, decay=0.01),
                   loss='categorical_crossentropy',
                   metrics=['accuracy', recall_score, precision_score])
 
@@ -154,9 +154,9 @@ def main():
                         verbose=2)
 
     model.save('saved_models/saved_model_78.h5')
-    #frozen_graph = freeze_session(K.get_session(),
+    # frozen_graph = freeze_session(K.get_session(),
     #                              output_names=[out.op.name for out in model.outputs])
-    #tf.train.write_graph(frozen_graph, logdir='saved_models', name="saved_model_78.pb", as_text=False)
+    # tf.train.write_graph(frozen_graph, logdir='saved_models', name="saved_model_78.pb", as_text=False)
 
 
 if __name__ == '__main__':
