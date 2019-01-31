@@ -37,8 +37,7 @@ def precision_score(y_true, y_pred):
     """Precision metric.
     Only computes a batch-wise average of precision.
     Computes the precision, a metric for multi-label classification of
-    how many selected items are relevant.
-    """
+    how many selected items are relevant."""
     true_positives = K.sum(K.round(K.clip(y_true * y_pred, 0, 1)))
     predicted_positives = K.sum(K.round(K.clip(y_pred, 0, 1)))
     precision = true_positives / (predicted_positives + K.epsilon())
@@ -49,8 +48,7 @@ def recall_score(y_true, y_pred):
     """Recall metric.
     Only computes a batch-wise average of recall.
     Computes the recall, a metric for multi-label classification of
-    how many relevant items are selected.
-    """
+    how many relevant items are selected."""
     true_positives = K.sum(K.round(K.clip(y_true * y_pred, 0, 1)))
     possible_positives = K.sum(K.round(K.clip(y_true, 0, 1)))
     recall = true_positives / (possible_positives + K.epsilon())
@@ -100,7 +98,7 @@ def main():
                                        horizontal_flip=True,
                                        zoom_range=[0.85, 1.11],
                                        brightness_range=[0.6, 1.4],
-                                       validation_split=0.15)
+                                       validation_split=0.0)
 
     train_gen = train_datagen.flow_from_directory(train_path,
                                                   target_size=(224, 224),
@@ -148,8 +146,8 @@ def main():
 
     model.fit_generator(train_gen,
                         steps_per_epoch=train_gen.samples // BATCH_SIZE,
-                        validation_data=val_gen,
-                        validation_steps=val_gen.samples // BATCH_SIZE,
+                        #validation_data=val_gen,
+                        #validation_steps=val_gen.samples // BATCH_SIZE,
                         epochs=EPOCHS,
                         verbose=2)
 
