@@ -10,12 +10,12 @@ from metrics import Metrics
 import pandas as pd
 import numpy as np
 
-train_path = 'dataset/78_classes'
+train_path = 'dataset/126_classes'
 # test_path = '../data/test'
 # valid_path = '../data/valid'
 
 FLAGS = None
-CLASSES_NUM = 78
+CLASSES_NUM = 126
 
 
 def freeze_session(session, keep_var_names=None, output_names=None, clear_devices=True):

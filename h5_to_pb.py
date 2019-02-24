@@ -57,15 +57,13 @@ def freeze_session(session, keep_var_names=None, output_names=None, clear_device
         return frozen_graph
 
 
-model = load_model('saved_models/new_saved_model.h5',
+model = load_model('saved_models/saved_model_78_3.h5',
                    custom_objects={'recall_score': recall_score,
                                    'precision_score': precision_score})
 print(model.inputs)
 print(model.outputs)
 
+frozen_graph = freeze_session(K.get_session(),
+                              output_names=[out.op.name for out in model.outputs])
 
-
-#frozen_graph = freeze_session(K.get_session(),
-#                              output_names=[out.op.name for out in model.outputs])
-
-# tf.train.write_graph(frozen_graph, "saved_models", "65_classes_new.pb", as_text=False)
+tf.train.write_graph(frozen_graph, "saved_models", "78_classes.pb", as_text=False)
