@@ -119,7 +119,7 @@ def main():
         model = get_new_model()
     else:
         print('Restoring model from ', SAVED_MODEL_PATH)
-        model = load_trained_model(SAVED_MODEL_PATH, True)
+        model = load_trained_model(SAVED_MODEL_PATH, False)  # change to True if needed
 
     print(model.summary())
 
@@ -146,8 +146,8 @@ def main():
 
     model.fit_generator(train_gen,
                         steps_per_epoch=train_gen.samples // BATCH_SIZE,
-                        #validation_data=val_gen,
-                        #validation_steps=val_gen.samples // BATCH_SIZE,
+                        # validation_data=val_gen,
+                        # validation_steps=val_gen.samples // BATCH_SIZE,
                         epochs=EPOCHS,
                         verbose=2)
 
