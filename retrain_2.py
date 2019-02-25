@@ -60,6 +60,7 @@ def load_trained_model(h5_file_path, using_softmax):
                                                            'precision_score': precision_score})
     if not using_softmax:
         x = saved_model.layers[FLAGS.layer_to_append].output
+        print(np.shape(x))
         reshaped = Reshape(target_shape=[1024], name='tiago_reshape')(x)
         # intermediate = Dense(512, activation='relu')(reshaped)
         # drop = Dropout(0.5)(intermediate)
@@ -98,7 +99,7 @@ def main():
                                        horizontal_flip=True,
                                        zoom_range=[0.85, 1.11],
                                        brightness_range=[0.6, 1.4],
-                                       validation_split=0.0)
+                                       validation_split=0.2)
 
     train_gen = train_datagen.flow_from_directory(train_path,
                                                   target_size=(224, 224),
@@ -128,7 +129,7 @@ def main():
     # for layer in model.layers[:FLAGS.layer_to_train]:
     #    layer.trainable = False
 
-    model.compile(optimizer=keras.optimizers.Adam(lr=0.0001, decay=0.01),
+    model.compile(optimizer=keras.optimizers.Adam(lr=0.001, decay=0.01),
                   loss='categorical_crossentropy',
                   metrics=['accuracy', recall_score, precision_score])
 
@@ -146,8 +147,8 @@ def main():
 
     model.fit_generator(train_gen,
                         steps_per_epoch=train_gen.samples // BATCH_SIZE,
-                        # validation_data=val_gen,
-                        # validation_steps=val_gen.samples // BATCH_SIZE,
+                        validation_data=val_gen,
+                        validation_steps=val_gen.samples // BATCH_SIZE,
                         epochs=EPOCHS,
                         verbose=2)
 
