@@ -15,7 +15,7 @@ train_path = 'dataset/117_classes'
 # valid_path = '../data/valid'
 
 FLAGS = None
-CLASSES_NUM = 126
+CLASSES_NUM = 117
 
 
 def freeze_session(session, keep_var_names=None, output_names=None, clear_devices=True):
