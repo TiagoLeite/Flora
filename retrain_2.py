@@ -10,7 +10,7 @@ from metrics import Metrics
 import pandas as pd
 import numpy as np
 
-train_path = 'dataset/126_classes'
+train_path = 'dataset/117_classes'
 # test_path = '../data/test'
 # valid_path = '../data/valid'
 
@@ -129,7 +129,7 @@ def main():
     # for layer in model.layers[:FLAGS.layer_to_train]:
     #    layer.trainable = False
 
-    model.compile(optimizer=keras.optimizers.Adam(lr=0.001, decay=0.01),
+    model.compile(optimizer=keras.optimizers.Adam(lr=0.001),
                   loss='categorical_crossentropy',
                   metrics=['accuracy', recall_score, precision_score])
 
