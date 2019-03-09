@@ -120,7 +120,7 @@ def main():
         model = get_new_model()
     else:
         print('Restoring model from ', SAVED_MODEL_PATH)
-        model = load_trained_model(SAVED_MODEL_PATH, False)  # change to True if needed
+        model = load_trained_model(SAVED_MODEL_PATH, True)  # change to True if needed
 
     print(model.summary())
 
@@ -129,7 +129,7 @@ def main():
     # for layer in model.layers[:FLAGS.layer_to_train]:
     #    layer.trainable = False
 
-    model.compile(optimizer=keras.optimizers.Adam(lr=0.001),
+    model.compile(optimizer=keras.optimizers.Adam(lr=0.005),
                   loss='categorical_crossentropy',
                   metrics=['accuracy', recall_score, precision_score])
 
@@ -152,7 +152,7 @@ def main():
                         epochs=EPOCHS,
                         verbose=2)
 
-    model.save('saved_models/saved_model_78.h5')
+    model.save('saved_models/saved_model_117.h5')
     # frozen_graph = freeze_session(K.get_session(),
     #                              output_names=[out.op.name for out in model.outputs])
     # tf.train.write_graph(frozen_graph, logdir='saved_models', name="saved_model_78.pb", as_text=False)

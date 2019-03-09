@@ -14,4 +14,5 @@ python3 -m scripts.retrain --bottleneck_dir=tf_files/bottlenecks_25 --how_many_t
 python3 plot_chart.py
 tensorboard --logdir=logs
 
-
+# TFLite
+tflite_convert --graph_def_file=saved_models/78_classes.pb   --output_file=saved_models/optimized_graph.lite   --input_format=TENSORFLOW_GRAPHDEF   --output_format=TFLITE   --input_shape=1,224,224,3   --input_array=input_1   --output_array=dense_1/Softmax   --inference_type=FLOAT   --input_data_type=FLOAT
