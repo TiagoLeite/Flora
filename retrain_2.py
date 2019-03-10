@@ -129,7 +129,7 @@ def main():
     # for layer in model.layers[:FLAGS.layer_to_train]:
     #    layer.trainable = False
 
-    model.compile(optimizer=keras.optimizers.Adam(lr=0.001),
+    model.compile(optimizer=keras.optimizers.Adam(lr=0.0005),
                   loss='categorical_crossentropy',
                   metrics=['accuracy', recall_score, precision_score])
 
