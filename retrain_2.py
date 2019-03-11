@@ -93,13 +93,13 @@ def main():
     train_datagen = ImageDataGenerator(preprocessing_function=None,
                                        rescale=1.0 / 255.0,
                                        rotation_range=180,
-                                       width_shift_range=0.2,
-                                       height_shift_range=0.2,
-                                       shear_range=0.1,
+                                       width_shift_range=0.25,
+                                       height_shift_range=0.25,
+                                       shear_range=0.2,
                                        horizontal_flip=True,
-                                       zoom_range=[0.85, 1.11],
+                                       zoom_range=[0.8, 1.2],
                                        brightness_range=[0.6, 1.4],
-                                       validation_split=0.2)
+                                       validation_split=0.15)
 
     train_gen = train_datagen.flow_from_directory(train_path,
                                                   target_size=(224, 224),
@@ -129,7 +129,7 @@ def main():
     # for layer in model.layers[:FLAGS.layer_to_train]:
     #    layer.trainable = False
 
-    model.compile(optimizer=keras.optimizers.Adam(lr=0.00025),
+    model.compile(optimizer=keras.optimizers.Adam(lr=0.00005),
                   loss='categorical_crossentropy',
                   metrics=['accuracy', recall_score, precision_score])
 
