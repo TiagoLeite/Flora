@@ -219,4 +219,8 @@ tf_files/*
 
 .idea/*
 
+dataset/*
+saved_models/*
+image_android/*
+
 # End of https://www.gitignore.io/api/python,pycharm+all
